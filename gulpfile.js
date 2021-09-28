@@ -163,7 +163,7 @@ const toProd = (done) => {
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, watchFiles);
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images);
 
 exports.cache = series(cache, rewrite);
 
