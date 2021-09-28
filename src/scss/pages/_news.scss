@@ -1,6 +1,6 @@
 .news {
   .title-line {
-    @include bg-cover('../../img/backgrounds/title-line.jpg');
+    @include bg-cover('../img/backgrounds/title-line.jpg');
     padding: 56px 0;
     
     .main-title {

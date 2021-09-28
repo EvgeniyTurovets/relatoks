@@ -29,7 +29,7 @@
       z-index: 2;
       width: 60px;
       height: 60px;
-      background: #FFFFFF url('../../img/elements/arrow-left-blue.svg') no-repeat 50% 50%;
+      background: #FFFFFF url('../img/elements/arrow-left-blue.svg') no-repeat 50% 50%;
       box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
       border-radius: 50%;
       cursor: pointer;
@@ -42,7 +42,7 @@
       z-index: 2;
       width: 60px;
       height: 60px;
-      background: #FFFFFF url('../../img/elements/arrow-left-blue.svg') no-repeat 50% 50%;
+      background: #FFFFFF url('../img/elements/arrow-left-blue.svg') no-repeat 50% 50%;
       box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
       border-radius: 50%;
       cursor: pointer;
@@ -53,7 +53,7 @@
       position: absolute;
       bottom: -60px;
       left: 47%;
-      content: url('../../img/partials/bottle.png');
+      content: url('../img/partials/bottle.png');
       z-index: 2;
       width: 341px;
       height: 325px;
@@ -160,7 +160,7 @@
 
             &::after {
               position: absolute;
-              content: url('../../img/elements/arrow-right-yellow.svg');
+              content: url('../img/elements/arrow-right-yellow.svg');
               right: -30px;
               top: 0;
             }
@@ -168,7 +168,7 @@
         }
 
         .developing {
-          @include bg-cover('../../img/backgrounds/about-drug-image.jpg');
+          @include bg-cover('../img/backgrounds/about-drug-image.jpg');
           padding: 60px 50px 70px;
           border-radius: 0px 20px 20px 0px;
 
@@ -190,7 +190,7 @@
   }
 
   .our-advantages {
-    @include bg-cover('../../img/backgrounds/bubbles.jpg');
+    @include bg-cover('../img/backgrounds/bubbles.jpg');
     padding: 80px 0 100px;
 
     .title {
@@ -235,22 +235,22 @@
         }
 
         .effect {
-          background: url('../../img/icons/effect.svg') no-repeat 50% 50%;
+          background: url('../img/icons/effect.svg') no-repeat 50% 50%;
         }
         .report {
-          background: url('../../img/icons/report.svg') no-repeat 50% 50%;
+          background: url('../img/icons/report.svg') no-repeat 50% 50%;
         }
         .methodology {
-          background: url('../../img/icons/methodology.svg') no-repeat 50% 50%;
+          background: url('../img/icons/methodology.svg') no-repeat 50% 50%;
         }
         .warranty {
-          background: url('../../img/icons/warranty.svg') no-repeat 50% 50%;
+          background: url('../img/icons/warranty.svg') no-repeat 50% 50%;
         }
         .russia {
-          background: url('../../img/icons/russia.svg') no-repeat 50% 50%;
+          background: url('../img/icons/russia.svg') no-repeat 50% 50%;
         }
         .confession {
-          background: url('../../img/icons/confession.svg') no-repeat 50% 50%;
+          background: url('../img/icons/confession.svg') no-repeat 50% 50%;
         }
       }
     }
@@ -303,7 +303,7 @@
         }
 
         &.cosmetology {
-          @include bg-cover('../../img/backgrounds/application1.jpg');
+          @include bg-cover('../img/backgrounds/application1.jpg');
 
           .inner-title {
             color: #9F2863;
@@ -315,7 +315,7 @@
         }
 
         &.neurology {
-          @include bg-cover('../../img/backgrounds/application2.jpg');
+          @include bg-cover('../img/backgrounds/application2.jpg');
 
           .inner-title {
             color: #0033A1;
@@ -330,7 +330,7 @@
   }
 
   .result {
-    @include bg-cover('../../img/backgrounds/bubbles-results.jpg');
+    @include bg-cover('../img/backgrounds/bubbles-results.jpg');
     padding: 0 0 80px;
 
     .title-wrapper {
@@ -388,7 +388,7 @@
       .result-slider-button-next,
       .result-slider-button-prev {
         cursor: pointer;
-        background: url('../../img/elements/arrow-left-black.svg') no-repeat 50% 50%;
+        background: url('../img/elements/arrow-left-black.svg') no-repeat 50% 50%;
         width: 16px;
         height: 16px;
       }
@@ -423,7 +423,7 @@
 
         &::after {
           position: absolute;
-          content: url('../../img/elements/arrow-right-yellow.svg');
+          content: url('../img/elements/arrow-right-yellow.svg');
           right: -30px;
           top: 0;
         }
@@ -499,7 +499,7 @@
       .news-slider-button-next,
       .news-slider-button-prev {
         cursor: pointer;
-        background: url('../../img/elements/arrow-left-black.svg') no-repeat 50% 50%;
+        background: url('../img/elements/arrow-left-black.svg') no-repeat 50% 50%;
         width: 16px;
         height: 16px;
       }
@@ -602,7 +602,7 @@
         .review {
           @include flex-sb-col;
           padding: 60px 120px;
-          background: url('../../img/elements/quote.svg') no-repeat 60px 37px / 300px;
+          background: url('../img/elements/quote.svg') no-repeat 60px 37px / 300px;
 
           .text {
             font-style: italic;
@@ -622,7 +622,7 @@
 
             &::after {
               position: absolute;
-              content: url('../../img/elements/arrow-right-yellow.svg');
+              content: url('../img/elements/arrow-right-yellow.svg');
               right: -30px;
               top: 0;
             }
@@ -647,7 +647,7 @@
       .about-slider-button-next,
       .about-slider-button-prev {
         cursor: pointer;
-        background: url('../../img/elements/arrow-left-black.svg') no-repeat 50% 50%;
+        background: url('../img/elements/arrow-left-black.svg') no-repeat 50% 50%;
         width: 16px;
         height: 16px;
       }
@@ -767,7 +767,7 @@
 
           &::after {
             position: absolute;
-            content: url('../../img/elements/arrow-right-yellow.svg');
+            content: url('../img/elements/arrow-right-yellow.svg');
             right: -30px;
             top: 0;
           }
@@ -802,7 +802,7 @@
             top: 20px;
             position: absolute;
             display: block;
-            background: url('../../img/elements/quote.svg') no-repeat 50% 50%;
+            background: url('../img/elements/quote.svg') no-repeat 50% 50%;
           }
         }
 
@@ -827,7 +827,7 @@
           top: 22px;
           position: absolute;
           display: block;
-          background: #0033A1 url('../../img/elements/plus.svg') no-repeat 50% 50%;
+          background: #0033A1 url('../img/elements/plus.svg') no-repeat 50% 50%;
         }
         // Добавляем собственный маркер для открытого состояния
         details[open] summary:before {
@@ -839,7 +839,7 @@
           top: 22px;
           position: absolute;
           display: block;
-          background: #0033A1 url('../../img/elements/minus.svg') no-repeat 50% 50%;
+          background: #0033A1 url('../img/elements/minus.svg') no-repeat 50% 50%;
         }
       }
     }
@@ -860,7 +860,7 @@
 
   .question {
     .question-form {
-      @include bg-cover('../../img/backgrounds/question-form.jpg');
+      @include bg-cover('../img/backgrounds/question-form.jpg');
       width: 100%;
       border-radius: 20px;
       padding: 60px 120px 60px 600px;
@@ -897,7 +897,7 @@
         .theme {
           width: 100%;
           padding: 14px 20px;
-          background: #ffffff url('../../img/elements/arrow-down-blue.svg') no-repeat right 15px top 50%;
+          background: #ffffff url('../img/elements/arrow-down-blue.svg') no-repeat right 15px top 50%;
           box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
           border-radius: 5px;
           border: none;

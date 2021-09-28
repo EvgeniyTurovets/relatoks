@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revDel = require('gulp-rev-delete-original');
+const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-image');
@@ -22,19 +23,6 @@ let isProd = false; // dev by default
 const clean = () => {
 	return del(['app/*'])
 }
-
-//svg sprite
-// const svgSprites = () => {
-//   return src('./src/img/svg/**.svg')
-//     .pipe(svgSprite({
-//       mode: {
-//         stack: {
-//           sprite: "../sprite.svg" //sprite file name
-//         }
-//       },
-//     }))
-//     .pipe(dest('./app/img'));
-// }
 
 const styles = () => {
   return src('./src/scss/**/*.scss')
@@ -64,7 +52,7 @@ const scripts = () => {
 		.pipe(gulpif(isProd, uglify().on("error", notify.onError())))
 		.pipe(dest('./app/js/'))
   return src(
-    ['./src/js/global.js', './src/js/components/**.js', './src/js/main.js'])
+    ['./src/js/main.js'])
     .pipe(gulpif(!isProd, sourcemaps.init()))
 		.pipe(babel({
 			presets: ['@babel/env']
@@ -99,7 +87,7 @@ const images = () => {
 		'./src/img/**/*.jpg',
 		'./src/img/**/*.png',
 		'./src/img/**/*.jpeg',
-    './src/img/**/*.svg',
+		'./src/img/**/*.svg'
 		])
     .pipe(gulpif(isProd, image()))
     .pipe(dest('./app/img'))
@@ -129,7 +117,6 @@ const watchFiles = () => {
   watch('./src/resources/**', resources);
   watch('./src/img/*.{jpg,jpeg,png,svg}', images);
 	watch('./src/img/**/*.{jpg,jpeg,png,svg}', images);
-  // watch('./src/img/svg/**.svg', svgSprites);
 }
 
 const cache = () => {
@@ -156,6 +143,14 @@ const rewrite = () => {
     .pipe(dest('app'));
 }
 
+const htmlMinify = () => {
+	return src('app/**/*.html')
+		.pipe(htmlmin({
+			collapseWhitespace: true
+		}))
+		.pipe(dest('app'));
+}
+
 const toProd = (done) => {
   isProd = true;
   done();
@@ -163,7 +158,7 @@ const toProd = (done) => {
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, watchFiles);
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 
