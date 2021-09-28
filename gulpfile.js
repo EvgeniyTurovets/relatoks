@@ -128,7 +128,7 @@ const watchFiles = () => {
   watch('./src/*.html', htmlInclude);
   watch('./src/resources/**', resources);
   watch('./src/img/*.{jpg,jpeg,png,svg}', images);
-	watch('./src/img/**/*.{jpg,jpeg,png}', images);
+	watch('./src/img/**/*.{jpg,jpeg,png,svg}', images);
   // watch('./src/img/svg/**.svg', svgSprites);
 }
 

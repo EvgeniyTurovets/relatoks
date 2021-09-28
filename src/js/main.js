@@ -9,16 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton: '.main-slider-button-next'
   });
 
-  // const resultSlider = tns({
-  //   container: '.result-slider',
-  //   fixedWidth: 700,
-  //   center: true,
-  //   nav: false,
-  //   gutter: 50,
-  //   speed: 400,
-  //   prevButton: '.result-slider-button-prev',
-  //   nextButton: '.result-slider-button-next'
-  // });
+  const resultSlider = tns({
+    container: '.result-slider',
+    fixedWidth: 700,
+    center: true,
+    nav: false,
+    gutter: 50,
+    speed: 400,
+    prevButton: '.result-slider-button-prev',
+    nextButton: '.result-slider-button-next'
+  });
 
   const newsSlider = tns({
     container: '.news-slider',
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton: '.about-slider-button-next'
   });
 
-  // const element = document.getElementById("image-compare");
+  const element = document.getElementById("image-compare");
   
-  // const viewer = new ImageCompare(element).mount();
+  const viewer = new ImageCompare(element).mount();
 
 });
