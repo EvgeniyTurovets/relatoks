@@ -6,13 +6,11 @@ const uglify = require('gulp-uglify-es').default;
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass')(require('sass'));
-const svgSprite = require('gulp-svg-sprite');
 const fileInclude = require('gulp-file-include');
 const sourcemaps = require('gulp-sourcemaps');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revDel = require('gulp-rev-delete-original');
-const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-image');
@@ -156,14 +154,6 @@ const rewrite = () => {
       manifest
     }))
     .pipe(dest('app'));
-}
-
-const htmlMinify = () => {
-	return src('app/**/*.html')
-		.pipe(htmlmin({
-			collapseWhitespace: true
-		}))
-		.pipe(dest('app'));
 }
 
 const toProd = (done) => {
