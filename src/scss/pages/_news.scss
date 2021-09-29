@@ -16,7 +16,7 @@
   }
 
   .main-content {
-    padding: 40px 0 80px;
+    padding: 40px 0;
 
     .breadcrumb {
       @include flex;
@@ -85,6 +85,38 @@
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    padding: 0 0 60px;
+
+    .pagination-container {
+      @include flex-all-center;
+
+      a {
+        margin: 0 5px;
+        padding: 9px 15px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #595E65;
+        transition: all 400ms;
+
+        &:hover,
+        &.active {
+          background: #F3D79A;
+        }
+
+        &.arrow {
+          border: 1px solid #F3D79A;
+        }
+
+        &:not(.active, :hover, .arrow) {
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
         }
       }
     }
