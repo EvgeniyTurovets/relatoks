@@ -1,13 +1,12 @@
 .news {
   .title-line {
-    @include bg-cover('../img/backgrounds/title-line.jpg');
+    @include bg-cover('../img/backgrounds/title-line-yellow.jpg');
     padding: 56px 0;
     
     .main-title {
       font-family: 'Tahoma';
       font-size: 40px;
       line-height: 48px;
-      color: #FFFFFF;
 
       .text-bold {
         font-weight: bold;
@@ -15,13 +14,11 @@
     }
   }
 
-  .main-content {
-    padding: 40px 0;
-
-    .breadcrumb {
+  .breadcrumb {
+    .breadcrumb-wrapper {
       @include flex;
-      margin: 0 0 50px;
-
+      margin: 40px 0 50px;
+  
       .item {
         position: relative;
         padding: 0 25px 0 0;
@@ -36,19 +33,22 @@
           right: 6px;
           content: '—';
         }
-
+  
         &:not(:last-child):hover {
           text-decoration: underline;
         }
       }
     }
+  }
+
+  .main-content {
+    padding: 50px 0 40px;
 
     .news-list {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 30px;
       row-gap: 100px;
-      padding: 100px 0 0;
 
       .news-item {
         position: relative;
