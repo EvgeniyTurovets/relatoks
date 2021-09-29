@@ -46,10 +46,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // const element = document.getElementById("image-compare");
   // const viewer = new ImageCompare(element).mount();
-
-  //пагинация для новостей
-  const container = document.getElementById('tui-pagination-container');
-  const instance = new Pagination(container, { });
-
-  instance.getCurrentPage();
 });

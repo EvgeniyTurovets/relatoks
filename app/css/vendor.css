@@ -506,6 +506,8 @@ textarea {
   height: 10px;
   float: left;
 }
+
+/*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
 .icv {
   position: relative;
   overflow: hidden;
@@ -725,3 +727,6 @@ textarea {
   -ms-user-select: none;
   user-select: none;
 }
+
+/*# sourceMappingURL=image-compare-viewer.min.css.map*/
+/*# sourceMappingURL=vendor.css.map */

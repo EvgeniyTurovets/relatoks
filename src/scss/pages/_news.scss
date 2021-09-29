@@ -85,6 +85,10 @@
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
+
+          &:hover {
+            color: #0033A1;
+          }
         }
       }
     }
@@ -96,9 +100,8 @@
     .pagination-container {
       @include flex-all-center;
 
-      a {
+      li {
         margin: 0 5px;
-        padding: 9px 15px;
         background: #FFFFFF;
         border-radius: 8px;
         font-size: 16px;
@@ -111,12 +114,19 @@
           background: #F3D79A;
         }
 
-        &.arrow {
-          border: 1px solid #F3D79A;
+        &:not(.active, :hover) {
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
         }
 
-        &:not(.active, :hover, .arrow) {
-          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
+        &:first-child,
+        &:last-child {
+          border: 1px solid #F3D79A;
+          box-shadow: none;
+        }
+
+        a {
+          display: block;
+          padding: 9px 15px;
         }
       }
     }
