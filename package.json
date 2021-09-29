@@ -7,6 +7,7 @@
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
     "dev": "gulp",
     "build": "gulp build",
+    "deploy": "gulp deploy",
     "cache": "gulp cache",
     "backend": "gulp backend",
     "code": "editorconfig-checker"
@@ -27,6 +28,7 @@
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-image": "^6.2.1",

@@ -16,6 +16,7 @@ const notify = require('gulp-notify');
 const image = require('gulp-image');
 const { readFileSync } = require('fs');
 const concat = require('gulp-concat');
+const ghPages = require('gulp-gh-pages');
 
 let isProd = false; // dev by default
 
@@ -141,6 +142,11 @@ const rewrite = () => {
     .pipe(dest('app'));
 }
 
+const deploy = () => {
+  return src('./app/**/*')
+    .pipe(ghPages());
+}
+
 const toProd = (done) => {
   isProd = true;
   done();
@@ -149,6 +155,8 @@ const toProd = (done) => {
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, watchFiles);
 
 exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images);
+
+exports.deploy = series(toProd, clean, htmlInclude, scripts, styles, resources, images, deploy);
 
 exports.cache = series(cache, rewrite);
 
