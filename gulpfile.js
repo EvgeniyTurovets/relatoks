@@ -11,7 +11,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revDel = require('gulp-rev-delete-original');
-const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-image');
@@ -31,7 +30,6 @@ const styles = () => {
     .pipe(autoprefixer({
       cascade: false,
     }))
-    .pipe(gulpif(isProd, cleanCSS({ level: 2 })))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(dest('./app/css/'))
     .pipe(browserSync.stream());
@@ -69,7 +67,7 @@ const scriptsBackend = () => {
     .pipe(concat('vendor.js'))
     .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
 		.pipe(dest('./app/js/'))
-	return src(['./src/js/functions/**.js', './src/js/components/**.js', './src/js/main.js'])
+	return src(['./src/js/main.js'])
     .pipe(dest('./app/js'))
 };
 
@@ -143,14 +141,6 @@ const rewrite = () => {
     .pipe(dest('app'));
 }
 
-const htmlMinify = () => {
-	return src('app/**/*.html')
-		.pipe(htmlmin({
-			collapseWhitespace: true
-		}))
-		.pipe(dest('app'));
-}
-
 const toProd = (done) => {
   isProd = true;
   done();
@@ -158,7 +148,7 @@ const toProd = (done) => {
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, watchFiles);
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images);
 
 exports.cache = series(cache, rewrite);
 

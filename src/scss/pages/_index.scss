@@ -1,7 +1,7 @@
 .main {
   .title {
     position: relative;
-    font-family: Tahoma;
+    font-family: 'Tahoma';
     font-size: 48px;
     line-height: 58px;
     color: #2D3341;
@@ -79,7 +79,7 @@
 
         .big-text {
           width: 800px;
-          font-family: Mojito Web;
+          font-family: 'Mojito Web';
           font-size: 130px;
           line-height: 130px;
           color: #BE9230;
@@ -130,7 +130,7 @@
           border-radius: 20px 0px 0px 20px;
 
           .inner-title {
-            font-family: Tahoma;
+            font-family: 'Tahoma';
             font-size: 48px;
             line-height: 58px;
             color: #2D3341;
@@ -173,7 +173,7 @@
           border-radius: 0px 20px 20px 0px;
 
           .text {
-            font-family: Tahoma;
+            font-family: 'Tahoma';
             font-size: 24px;
             line-height: 38px;
             color: #FFFFFF;
@@ -194,7 +194,7 @@
     padding: 80px 0 100px;
 
     .title {
-      font-family: Tahoma;
+      font-family: 'Tahoma';
       font-weight: bold;
       font-size: 16px;
       line-height: 19px;
@@ -203,7 +203,7 @@
     }
 
     .inner-title {
-      font-family: Tahoma;
+      font-family: 'Tahoma';
       font-size: 48px;
       line-height: 58px;
       margin: 0 0 80px 120px;
@@ -275,7 +275,7 @@
         border-radius: 20px;
 
         .inner-title {
-          font-family: Mojito Web;
+          font-family: 'Mojito Web';
           font-size: 72px;
           line-height: 70px;
           margin: 0 0 30px;
@@ -344,7 +344,7 @@
       }
   
       .result-title {
-        font-family: Tahoma;
+        font-family: 'Tahoma';
         font-size: 36px;
         line-height: 43px;
       }
@@ -552,79 +552,86 @@
 
   .about {
     background: #F3F3F3;
-    padding: 60px 0 80px;
+    padding: 60px 0 35px;
 
     .title {
-      margin: 0 0 40px 120px;
+      margin: 0 0 0 120px;
     }
 
-    .about-slider {
-      position: relative;
-      margin: 0 0 0 120px;
+    .slider-wrapper {
+      width: 120%;
 
-      .slide {
-        background: #FFFFFF;
-        min-height: 510px;
-        display: grid;
-        grid-template-columns: 360px calc(100% - 360px);
-        border-radius: 20px;
-
-        .person {
-          box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
-
-          .photo {
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 250px;
-            border-radius: 20px 0 0 0;
-          }
+      .about-slider {
   
-          .person-info {
-            padding: 30px 40px 50px;
+        .slide {
+          padding: 40px 45px 45px 120px;
+
+          .grid-container {
+            background: #FFFFFF;
+            display: grid;
+            grid-template-columns: 360px calc(100% - 360px);
+            border-radius: 20px;
+            min-height: 510px;
   
-            .name {
-              font-weight: bold;
-              font-size: 20px;
-              line-height: 24px;
-              margin: 0 0 20px;
+            .person {
+              box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
+              border-radius: 20px 0 0 20px;
+              
+              .photo {
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 250px;
+                border-radius: 20px 0 0 0;
+              }
+      
+              .person-info {
+                padding: 30px 40px 50px;
+      
+                .name {
+                  font-weight: bold;
+                  font-size: 20px;
+                  line-height: 24px;
+                  margin: 0 0 20px;
+                }
+      
+                .position {
+                  font-size: 14px;
+                  line-height: 22px;
+                  color: #A4A8AC;
+                }
+              }
             }
-  
-            .position {
-              font-size: 14px;
-              line-height: 22px;
-              color: #A4A8AC;
-            }
-          }
-        }
-
-        .review {
-          @include flex-sb-col;
-          padding: 60px 120px;
-          background: url('../img/elements/quote.svg') no-repeat 60px 37px / 300px;
-
-          .text {
-            font-style: italic;
-            font-weight: 300;
-            font-size: 20px;
-            line-height: 32px;
-            margin: 0 0 50px;
-          }
-
-          .link > a {
-            position: relative;
-            display: inline-block;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 19px;
-            color: #0033A1;
-
-            &::after {
-              position: absolute;
-              content: url('../img/elements/arrow-right-yellow.svg');
-              right: -30px;
-              top: 0;
+    
+            .review {
+              @include flex-sb-col;
+              padding: 60px 120px;
+              background: url('../img/elements/quote.svg') no-repeat 60px 37px / 300px;
+    
+              .text {
+                font-style: italic;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 32px;
+                margin: 0 0 50px;
+              }
+    
+              .link > a {
+                position: relative;
+                display: inline-block;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+                color: #0033A1;
+    
+                &::after {
+                  position: absolute;
+                  content: url('../img/elements/arrow-right-yellow.svg');
+                  right: -30px;
+                  top: 0;
+                }
+              }
             }
           }
         }
@@ -635,7 +642,7 @@
       @include flex-all-sb;
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: 45px;
       font-weight: 600;
       font-size: 16px;
       line-height: 22px;

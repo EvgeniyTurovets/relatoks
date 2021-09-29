@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     container: '.main-slider',
     items: 1,
     nav: false,
-    speed: 400,
+    speed: 600,
     prevButton: '.main-slider-button-prev',
     nextButton: '.main-slider-button-next'
   });
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //   center: true,
   //   nav: false,
   //   gutter: 50,
-  //   speed: 400,
+  //   speed: 600,
   //   prevButton: '.result-slider-button-prev',
   //   nextButton: '.result-slider-button-next'
   // });
@@ -28,17 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
     loop: false,
     slideBy: 3,
     gutter: 30,
-    speed: 400,
+    speed: 600,
     prevButton: '.news-slider-button-prev',
     nextButton: '.news-slider-button-next'
   });
 
   const aboutSlider = tns({
     container: '.about-slider',
-    mode: 'gallery',
-    items: 1,
+    fixedWidth: 1410,
     nav: false,
-    speed: 1500,
+    gutter: 400,
+    speed: 600,
     prevButton: '.about-slider-button-prev',
     nextButton: '.about-slider-button-next'
   });
