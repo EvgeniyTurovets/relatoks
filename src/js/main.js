@@ -65,4 +65,29 @@ document.addEventListener('DOMContentLoaded', function() {
       nextButton: '.news-detailed-slider-button-next'
     });
   }
+
+  // слайдеры для инструкций
+  if(document.querySelector('.instruction-slider')) {
+    const instructionSlider = tns({
+      container: '.instruction-slider',
+      nav: false,
+      gutter: 100,
+      speed: 600,
+      prevButton: '.instruction-slider-button-prev',
+      nextButton: '.instruction-slider-button-next'
+    });
+  }
+
+  if(document.querySelector('.documents-slider')) {
+    const documentsSlider = tns({
+      container: '.documents-slider',
+      fixedWidth: 210,
+      nav: false,
+      slideBy: 4,
+      gutter: 30,
+      speed: 600,
+      prevButton: '.documents-slider-button-prev',
+      nextButton: '.documents-slider-button-next'
+    });
+  }
 });

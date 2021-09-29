@@ -45,8 +45,7 @@
 
           .link {
             width: 250px;
-            padding: 15px 0;
-            margin: 0 10px 0 0;
+            padding: 15px 10px 15px 0;
             
             &:not(:last-child) {
               border-bottom: 1px solid #D4D7DB;
@@ -64,7 +63,7 @@
               &:after {
                 content: '›';
                 position: absolute;
-                right: 0;
+                right: -10px;
                 color: #BE9230;
               }
             }
