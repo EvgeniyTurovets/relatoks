@@ -405,7 +405,8 @@
     
     .title-wrapper {
       @include flex-all-sb;
-      margin: 0 0 530px 120px;
+      margin: 0 0 0 120px;
+      padding: 0 0 530px;
 
       .title {
         margin: 0;
