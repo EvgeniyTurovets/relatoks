@@ -420,9 +420,22 @@
                 margin-right: 30px;
               }
 
-              .age-select,
-              .weight-select {
+              .age-select {
                 @include custom-select;
+              }
+
+              .weight-input {
+                input {
+                  width: 100%;
+                  border: none;
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 22px;
+                  color: #2D3341;
+                  background: #F3F3F3;
+                  border-radius: 5px;
+                  padding: 14px 20px;
+                }
               }
             }
           }
@@ -445,9 +458,8 @@
               width: 290px;
 
               .image {
+                display: block;
                 width: 100%;
-                height: 380px;
-                background: #FFFFFF url('../img/partials/body.png') no-repeat 50% 60% / 110%;
                 border: 1px solid #D4D7DB;
                 border-radius: 5px;
                 margin: 0 0 10px;
@@ -464,6 +476,7 @@
 
             .body-selects {
               width: calc(100% - 290px - 30px);
+              margin: 0 0 40px 0;
 
               .part-select,
               .muscle-select,
