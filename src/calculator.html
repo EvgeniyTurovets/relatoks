@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="site-container">
+    @include('partials/header.html')
+    <div class="calculator">
+
+      <section id="calculator-title-line" class="title-line-yellow">
+        <div class="container">
+          <h1 class="main-title"><span class="text-bold">Калькулятор</span> доз</h1>
+        </div>
+      </section>
+
+      <section class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb-wrapper">
+            <div class="item"><a href="">Главная</a></div>
+            <div class="item">Калькулятор доз</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-content">
+        <div class="small-container">
+          <div class="main-content-wrapper">
+            <div class="title"><span class="text-bold">Расчет</span> дозировки:</div>
+            <div class="control">
+
+              <button id="calculate-cosmetology" type="button" style="background-image: url('./img/backgrounds/calculator-checkbox1.png');">
+                <div class="text">Для Косметологии</div>
+                <div class="checkbox"></div>
+              </button type="button">
+
+              <button id="calculate-neurology" type="button" style="background-image: url('./img/backgrounds/calculator-checkbox2.png');">
+                <div class="text">Для Неврологии</div>
+                <div class="checkbox"></div>
+              </button type="button">
+
+            </div>
+            <div class="content">
+
+              <div id="cosmetology-info" class="cosmetology-info">
+                <div class="subtitle">
+                  Расчёт количества раствора, содержащего 1 ЕД препарата в инсулиновом шприце
+                </div>
+                
+                <div class="select-title">
+                  Шприц: 
+                  <div class="title-icon">
+                    <div class="injector-hint">
+                      <div class="text">
+                        Мы используем в калькуляторе следующие шприцы:
+                      </div>
+                      <ul class="list">
+                        <li>1 мл на 50 делений</li>
+                        <li>1 мл на 40 делений</li>
+                        <li>0.5 мл на 50 делений</li>
+                        <li>0.3 мл на 30 делений</li>
+                      </ul>
+                      <div class="text">
+                        Наиболее удобными для любых разведений считаются 0.5 мл на 50 делений, 0.3 мл на 30 делений.
+                      </div>
+                      <div class="text">
+                        Для классического разведения подходит также шприц 1 мл на 50 делений.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="injector-select">
+                  <div class="current-value" tabindex="0">
+                    <div class="value">
+                      <input class="input" type="radio" id="injector-item-0" value="1" name="injector" checked/>
+                      <p class="input-text">1 мл на 50 делений</p>
+                    </div>
+                    <div class="value">
+                      <input class="input" type="radio" id="injector-item-1" value="2" name="injector"/>
+                      <p class="input-text">1 мл на 40 делений</p>
+                    </div>
+                    <div class="value">
+                      <input class="input" type="radio" id="injector-item-2" value="3" name="injector"/>
+                      <p class="input-text">0.5 мл на 50 делений</p>
+                    </div>
+                    <div class="value">
+                      <input class="input" type="radio" id="injector-item-3" value="4" name="injector"/>
+                      <p class="input-text">0.3 мл на 30 делений</p>
+                    </div>
+                    <img class="icon" src="./img/elements/arrow-down-blue.svg"/>
+                  </div>
+                  <ul class="list">
+                    <li>
+                      <label class="option" for="injector-item-0">1 мл на 50 делений</label>
+                    </li>
+                    <li>
+                      <label class="option" for="injector-item-1">1 мл на 40 делений</label>
+                    </li>
+                    <li>
+                      <label class="option" for="injector-item-2">0.5 мл на 50 делений</label>
+                    </li>
+                    <li>
+                      <label class="option" for="injector-item-3">0.3 мл на 30 делений</label>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="injector"></div>
+
+                <div class="select-title">
+                  Разведение:
+                </div>
+                <div class="dose-select">
+                  <div class="current-value" tabindex="0">
+                    <div class="value">
+                      <input class="input" type="radio" id="dose-item-0" value="0" name="dose" checked/>
+                      <p class="input-text">
+                        Классическое
+                        <span class="input-sub-text">100 ЕД в 2 мл NaCl или 50 ЕД в 1 мл NaCl</span>
+                      </p>
+                    </div>
+                    <div class="value">
+                      <input class="input" type="radio" id="dose-item-1" value="1" name="dose"/>
+                      <p class="input-text">
+                        Классическое
+                        <span class="input-sub-text">100 ЕД в 2 мл NaCl</span>
+                      </p>
+                    </div>
+                    <img class="icon" src="./img/elements/arrow-down-blue.svg"/>
+                  </div>
+                  <ul class="list">
+                    <li>
+                      <label class="option" for="dose-item-0">
+                        Классическое
+                        <span class="input-sub-text">100 ЕД в 2 мл NaCl или 50 ЕД в 1 мл NaCl</span>
+                      </label>
+                      <label class="option" for="dose-item-1">
+                        Классическое
+                        <span class="input-sub-text">100 ЕД в 2 мл NaCl</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div id="cosmetology-calculation-button-container" class="calculation active">
+                  <button id="cosmetology-calculation-button" class="calculation-button">
+                    Завершить расчет
+                  </button>
+                </div>
+
+                <div id="cosmetology-calculation-result" class="result">
+                  <div class="title"><span class="text-bold">Ваш</span> результат:</div>
+                  <ul class="list">
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          1 ЕД
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        1 Деление
+                      </div>
+                    </li>
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          Итого
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        1 Деление
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="buttons-container">
+                    <a href="" class="button"><img src="./img/icons/mail-empty.svg">Отправить по e-mail</a>
+                    <a href="" class="button"><img src="./img/icons/phone-empty.svg">Отправить по SMS</a>
+                    <a href="" class="button">Сохранить расчет</a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="neurology-info" class="neurology-info">
+                <div class="subtitle">
+                  Мы предлагаем удобный калькулятор для расчёта доз препарата 
+                  Релатокс на одну инъекционную сессию для одного пациента
+                </div>
+                
+                <div class="select-title">
+                  Показание:
+                </div>
+                <div class="indications-select">
+                  <div class="current-value" tabindex="0">
+                    <div class="value">
+                      <input class="input" type="radio" id="indications-item-empty" value="" name="indications" checked/>
+                      <p class="input-text"><span class="small-text">Выберите показание из списка</span></p>
+                    </div>
+                    <div class="value">
+                      <input class="input" type="radio" id="indications-item-0" value="1" name="indications"/>
+                      <p class="input-text">ДЦП</p>
+                    </div>
+                    <div class="value">
+                      <input class="input" type="radio" id="indications-item-1" value="2" name="indications"/>
+                      <p class="input-text">Спастичность верхней конечности после инсульта</p>
+                    </div>
+                    <div class="value">
+                      <input class="input" type="radio" id="indications-item-2" value="3" name="indications"/>
+                      <p class="input-text">Блефароспазм</p>
+                    </div>
+                    <div class="value">
+                      <input class="input" type="radio" id="indications-item-3" value="4" name="indications"/>
+                      <p class="input-text">Аксиллярный гипергидроз</p>
+                    </div>
+                    <img class="icon" src="./img/elements/arrow-down-blue.svg"/>
+                  </div>
+                  <ul class="list">
+                    <li>
+                      <label class="option" for="indications-item-0">ДЦП</label>
+                    </li>
+                    <li>
+                      <label class="option" for="indications-item-1">Спастичность верхней конечности после инсульта</label>
+                    </li>
+                    <li>
+                      <label class="option" for="indications-item-2">Блефароспазм</label>
+                    </li>
+                    <li>
+                      <label class="option" for="indications-item-3">Аксиллярный гипергидроз</label>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="selects-container">
+                  <div class="item">
+                    <div class="select-title">
+                      Полных лет:
+                    </div>
+                    <div class="age-select">
+                      <div class="current-value" tabindex="0">
+                        <div class="value">
+                          <input class="input" type="radio" id="age-item-0" value="1" name="age" checked/>
+                          <p class="input-text">5</p>
+                        </div>
+                        <div class="value">
+                          <input class="input" type="radio" id="age-item-1" value="2" name="age"/>
+                          <p class="input-text">6</p>
+                        </div>
+                        <div class="value">
+                          <input class="input" type="radio" id="age-item-2" value="3" name="age"/>
+                          <p class="input-text">7</p>
+                        </div>
+                        <div class="value">
+                          <input class="input" type="radio" id="age-item-3" value="4" name="age"/>
+                          <p class="input-text">8</p>
+                        </div>
+                        <img class="icon" src="./img/elements/arrow-down-blue.svg"/>
+                      </div>
+                      <ul class="list">
+                        <li>
+                          <label class="option" for="age-item-0">5</label>
+                        </li>
+                        <li>
+                          <label class="option" for="age-item-1">6</label>
+                        </li>
+                        <li>
+                          <label class="option" for="age-item-2">7</label>
+                        </li>
+                        <li>
+                          <label class="option" for="age-item-3">8</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="select-title">
+                      Вес, кг:
+                    </div>
+                    <div class="weight-select">
+                      <div class="current-value" tabindex="0">
+                        <div class="value">
+                          <input class="input" type="radio" id="weight-item-0" value="1" name="weight" checked/>
+                          <p class="input-text">15</p>
+                        </div>
+                        <div class="value">
+                          <input class="input" type="radio" id="weight-item-1" value="2" name="weight"/>
+                          <p class="input-text">16</p>
+                        </div>
+                        <div class="value">
+                          <input class="input" type="radio" id="weight-item-2" value="3" name="weight"/>
+                          <p class="input-text">17</p>
+                        </div>
+                        <div class="value">
+                          <input class="input" type="radio" id="weight-item-3" value="4" name="weight"/>
+                          <p class="input-text">18</p>
+                        </div>
+                        <img class="icon" src="./img/elements/arrow-down-blue.svg"/>
+                      </div>
+                      <ul class="list">
+                        <li>
+                          <label class="option" for="weight-item-0">15</label>
+                        </li>
+                        <li>
+                          <label class="option" for="weight-item-1">16</label>
+                        </li>
+                        <li>
+                          <label class="option" for="weight-item-2">17</label>
+                        </li>
+                        <li>
+                          <label class="option" for="weight-item-3">18</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="title"><span class="text-bold">Добавить</span> мышцу:</div>
+                <div class="body-container">
+                  <div class="body-preview">
+                    <div class="image"></div>
+                    <div class="sub-text">
+                      Можно добавить или убрать мышцу в перечень спатичности, кликнув нужную область
+                    </div>
+                  </div>
+                  <div class="body-selects">
+
+                    <div class="item">
+                      <div class="select-title">
+                        Область (часть тела):
+                      </div>
+                      <div class="part-select">
+                        <div class="current-value" tabindex="0">
+                          <div class="value">
+                            <input class="input" type="radio" id="part-item-0" value="1" name="part" checked/>
+                            <p class="input-text">Мышца плеча</p>
+                          </div>
+                          <img class="icon" src="./img/elements/arrow-down-blue.svg"/>
+                        </div>
+                        <ul class="list">
+                          <li>
+                            <label class="option" for="part-item-0">Мышца плеча</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="select-title">
+                        Мышца:
+                      </div>
+                      <div class="muscle-select">
+                        <div class="current-value" tabindex="0">
+                          <div class="value">
+                            <input class="input" type="radio" id="muscle-item-0" value="1" name="muscle" checked/>
+                            <p class="input-text">т.Biceps brachii Двуглавая мышца плеча</p>
+                          </div>
+                          <img class="icon" src="./img/elements/arrow-down-blue.svg"/>
+                        </div>
+                        <ul class="list">
+                          <li>
+                            <label class="option" for="muscle-item-0">т.Biceps brachii Двуглавая мышца плеча</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="select-title">
+                        MAS:
+                        <div class="title-icon">
+                          <div class="injector-hint">
+                            <div class="title">
+                              Модифицированнная шкала Эшворта (MAS):
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">0 — </span>нет повышения мышечного тонуса;
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">1 — </span>Лёгкое повышение мышечного тонуса — незначительное сопротивление 
+                              в начале совершаемого пассивного движения с последующим расслаблением;
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">2 — </span>Умеренное повышение мышечного тонуса — сопротивление на протяжении большей части 
+                              объёма пассивного движения, однако совершение этого движения не затруднено;
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">3 — </span>Значительное повышение мышечного тонуса — совершение 
+                              пассивного движения затруднено, объём движения в суставе ограничен;
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">4 — </span>Поражённый сегмент конечности фиксирован в положении сгибания или разгибания.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mas-select">
+                        <div class="current-value" tabindex="0">
+                          <div class="value">
+                            <input class="input" type="radio" id="mas-item-0" value="1" name="mas" checked/>
+                            <p class="input-text">2</p>
+                          </div>
+                          <img class="icon" src="./img/elements/arrow-down-blue.svg"/>
+                        </div>
+                        <ul class="list">
+                          <li>
+                            <label class="option" for="mas-item-0">2</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <button class="muscle-adding">
+                      Добавить новую мышцу
+                    </button>
+
+                  </div>
+
+                  <div class="table">
+                    <div class="title-row">
+                      <div class="name">Перечень мышц</div>
+                      <div class="mas">Уровень MAS</div>
+                    </div>
+                    <div class="row">
+                      <a class="name" href="">т.Biceps brachii Двуглавая мышца плеча</a>
+                      <div class="mas">2</div>
+                      <button class="remove"></button>
+                    </div>
+                    <div class="row">
+                      <a class="name" href="">т.Flexor digitorum profundus Глубокий сгибатель пальцев</a>
+                      <div class="mas">4</div>
+                      <button class="remove"></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="neurology-calculation-button-container" class="calculation active">
+                  <button id="neurology-calculation-button" class="calculation-button">
+                    Завершить расчет
+                  </button>
+                </div>
+
+                <div id="neurology-calculation-result" class="result">
+                  <div class="title"><span class="text-bold">Ваш</span> результат:</div>
+                  <ul class="list">
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          Двуглавая мышца плеча
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        36 ЕД
+                      </div>
+                    </li>
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          Плечелучевая мышца
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        126 ЕД
+                      </div>
+                    </li>
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          Итого
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        126 ЕД
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="sub-text">Максимальная доза превышена. Рекомендуем сократить количество мышц или пересмотреть степень MAS.</div>
+
+                  <div class="buttons-container">
+                    <a href="" class="button"><div class="mail-icon"></div>Отправить по e-mail</a>
+                    <a href="" class="button"><div class="phone-icon"></div>Отправить по SMS</a>
+                    <a href="" class="button">Сохранить расчет</a>
+                  </div>
+                </div>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

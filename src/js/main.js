@@ -107,4 +107,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sliderCounter(documentsSlider, '.instruction .count', 4);
   }
+
+  // калькулятор
+  if(document.querySelector('.calculator')) {
+    const cosmetology = document.getElementById('calculate-cosmetology');
+    const neurology = document.getElementById('calculate-neurology');
+    const line = document.getElementById('calculator-title-line');
+    const cosmetologyInfo = document.getElementById('cosmetology-info');
+    const neurologyInfo = document.getElementById('neurology-info');
+
+    // клики по чекбоксам косметологии и неврологии
+    cosmetology.onclick = () => {
+      cosmetology.classList.add('active');
+      neurology.classList.remove('active');
+      line.className = 'title-line-pink';
+      cosmetologyInfo.classList.add('active');
+      neurologyInfo.classList.remove('active');
+    }
+    neurology.onclick = () => {
+      neurology.classList.add('active');
+      cosmetology.classList.remove('active');
+      line.className = 'title-line-blue';
+      neurologyInfo.classList.add('active');
+      cosmetologyInfo.classList.remove('active');
+    }
+
+    // клик по кнопке завершения расчета в косметологии
+    const cosmetologyСalculationButton = document.getElementById('cosmetology-calculation-button');
+    const cosmetologyCalculationButtonContainer = document.getElementById('cosmetology-calculation-button-container');
+    const cosmetologyCalculationResult = document.getElementById('cosmetology-calculation-result');
+
+    cosmetologyСalculationButton.onclick = () => {
+      cosmetologyCalculationButtonContainer.classList.remove('active');
+      cosmetologyCalculationResult.classList.add('active');
+    }
+
+    // клик по кнопке завершения расчета в неврологии
+    const neurologyСalculationButton = document.getElementById('neurology-calculation-button');
+    const neurologyCalculationButtonContainer = document.getElementById('neurology-calculation-button-container');
+    const neurologyCalculationResult = document.getElementById('neurology-calculation-result');
+
+    neurologyСalculationButton.onclick = () => {
+      neurologyCalculationButtonContainer.classList.remove('active');
+      neurologyCalculationResult.classList.add('active');
+    }
+  }
 });
