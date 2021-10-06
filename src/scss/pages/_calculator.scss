@@ -425,6 +425,8 @@
               }
 
               .weight-input {
+                position: relative;
+
                 input {
                   width: 100%;
                   border: none;
@@ -435,6 +437,16 @@
                   background: #F3F3F3;
                   border-radius: 5px;
                   padding: 14px 20px;
+                }
+                
+                .error {
+                  position: absolute;
+                  bottom: -25px;
+                  left: 10px;
+                  font-style: italic;
+                  font-size: 14px;
+                  line-height: 20px;
+                  color: #DC3434;
                 }
               }
             }
