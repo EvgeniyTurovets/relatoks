@@ -61,9 +61,15 @@ a:visited {
 .container {
   position: relative;
   margin: 0 auto;
-  width: 1410px;
+  max-width: 1410px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+@include small-screen {
+  .container {
+    padding: 0 20px;
+  }
 }

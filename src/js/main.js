@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  // общие функции
   const sliderCounter = (slider, selector, count = 1) => {
     const info = slider.getInfo();
     document.querySelector(selector).innerHTML = info.slideCount <= count ? '' : `${info.displayIndex}/${info.slideCount}`;
@@ -10,7 +11,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // слайдеры для главной
+  // бургер с меню
+  if(document.getElementById('burger-checkbox')) {
+    const burger = document.getElementById('burger-checkbox');
+    const menu = document.querySelector('.header .menu');
+    const body = document.querySelector('body');
+
+    burger.onchange = () => {
+      if (burger.checked) {
+        menu.style.left = '0';
+        body.style.overflow = 'hidden';
+      } else {
+        menu.style.left = '100vw';
+        body.style.overflow = 'auto';
+      }
+    }
+
+    const menuItems = document.querySelectorAll('.header .menu .item');
+
+    menuItems.forEach(element => {
+      if (element.querySelector('.dropdown-content')) {
+        const dropdown = element.querySelector('.dropdown-content');
+        const buttonLeft = element.querySelector('.item-button');
+
+        buttonLeft.onclick = () => {
+          dropdown.style.left = '0';
+        }
+
+        const buttonRight = dropdown.querySelector('.back-button');
+
+        buttonRight.onclick = () => {
+          dropdown.style.left = '100vw';
+        }
+      }
+    });
+  }
+
   if(document.querySelector('.main-slider')) {
     const mainSlider = tns({
       container: '.main-slider',
@@ -109,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // калькулятор
-  if(document.querySelector('.calculator')) {
+  if(document.querySelector('div.calculator')) {
     const cosmetology = document.getElementById('calculate-cosmetology');
     const neurology = document.getElementById('calculate-neurology');
     const line = document.getElementById('calculator-title-line');
