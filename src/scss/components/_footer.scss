@@ -23,26 +23,26 @@
     .text-styled {
       color: #BE9230;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 22px;
       text-transform: uppercase;
       margin: 0 0 20px;
     }
 
     .address {
-      font-size: 16px;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 20px;
     }
 
     .text-bold {
       font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 20px;
       margin: 0 0 20px;
     }
 
     .link {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 20px;
       color: #595E65;
       margin: 0 0 10px;
@@ -54,8 +54,8 @@
 
     .link-bold {
       font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 20px;
       margin: 0 0 10px;
 
       &:hover {
@@ -113,7 +113,7 @@
     .main-menu {
       position: relative;
       justify-content: flex-start;
-      padding: 50px 0 80px;
+      padding: 30px 0 80px;
       margin: 0;
 
       .item-big {

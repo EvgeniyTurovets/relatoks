@@ -87,13 +87,17 @@ document.addEventListener('DOMContentLoaded', function() {
   if(document.querySelector('.news-slider')) {
     const newsSlider = tns({
       container: '.news-slider',
-      touch: false,
-      fixedWidth: 440,
       nav: false,
       rewind: true,
       loop: false,
       gutter: 30,
       speed: 600,
+      responsive: {
+        1410: {
+          fixedWidth: 440,
+          gutter: 100
+        }
+      },
       prevButton: '.news-slider-button-prev',
       nextButton: '.news-slider-button-next'
     });
@@ -105,11 +109,14 @@ document.addEventListener('DOMContentLoaded', function() {
   if(document.querySelector('.about-slider')) {
     const aboutSlider = tns({
       container: '.about-slider',
-      touch: false,
-      fixedWidth: 1410,
       nav: false,
-      gutter: 400,
       speed: 600,
+      responsive: {
+        1410: {
+          fixedWidth: 1410,
+          gutter: 100
+        }
+      },
       prevButton: '.about-slider-button-prev',
       nextButton: '.about-slider-button-next'
     });
