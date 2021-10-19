@@ -253,6 +253,10 @@
             top: 0;
           }
         }
+
+        span {
+          width: calc(100% - 30px);
+        }
       }
 
       .recaptcha-wrapper {
