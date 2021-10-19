@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
       container: '.main-slider',
       items: 1,
       nav: false,
-      mouseDrag: true,
-      swipeAngle: false,
+      // mouseDrag: true,
+      // swipeAngle: false,
       speed: 600,
       prevButton: '.main-slider-button-prev',
       nextButton: '.main-slider-button-next',
@@ -105,6 +105,27 @@ document.addEventListener('DOMContentLoaded', function() {
     sliderCounter(newsSlider, '.news .count', 3);
   }
 
+  if(document.querySelector('.awards-slider')) {
+    const awardsSlider = tns({
+      container: '.awards-slider',
+      nav: false,
+      controls: false,
+      mouseDrag: true,
+      swipeAngle: false,
+      fixedWidth: 240,
+      speed: 600,
+      gutter: 50,
+      loop: false,
+      center: true,
+      responsive: {
+        1410: {
+          fixedWidth: 300,
+          gutter: 150,
+          center: false
+        }
+      }
+    });
+  }
 
   if(document.querySelector('.about-slider')) {
     const aboutSlider = tns({

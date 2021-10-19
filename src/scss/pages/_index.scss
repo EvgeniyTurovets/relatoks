@@ -549,13 +549,8 @@
         margin: 0 0 40px;
       }
 
-      .content {
-        @include flex-all-sb;
-  
-        .item {
-          display: block;
-          width: 330px;
-        }
+      .awards-slider {
+        
       }
     }
   }
@@ -1385,22 +1380,20 @@
   
     .awards {
       padding: 50px 0;
+
+      .container {
+        padding: 0;
+      }
   
       .awards-wrapper {
-        margin: 0 0 0 45px;
+        margin: 0;
         
         .title {
-          margin: 0 0 40px;
+          margin: 0 20px 25px 65px;
         }
   
-        .content {
-          @include flex-all-sb;
-    
-          .item {
-            display: block;
-            width: 210px;
-            margin: 0 30px 0 0;
-          }
+        .awards-slider {
+          width: 120%;
         }
       }
     }
