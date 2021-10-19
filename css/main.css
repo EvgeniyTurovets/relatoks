@@ -1068,15 +1068,6 @@ a:visited {
 .main .awards .awards-wrapper .title {
   margin: 0 0 40px;
 }
-.main .awards .awards-wrapper .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.main .awards .awards-wrapper .content .item {
-  display: block;
-  width: 330px;
-}
 .main .about {
   background: #F3F3F3;
   padding: 60px 0 35px;
@@ -1799,21 +1790,17 @@ a:visited {
   .main .awards {
     padding: 50px 0;
   }
+  .main .awards .container {
+    padding: 0;
+  }
   .main .awards .awards-wrapper {
-    margin: 0 0 0 45px;
+    margin: 0;
   }
   .main .awards .awards-wrapper .title {
-    margin: 0 0 40px;
+    margin: 0 20px 25px 65px;
   }
-  .main .awards .awards-wrapper .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .main .awards .awards-wrapper .content .item {
-    display: block;
-    width: 210px;
-    margin: 0 30px 0 0;
+  .main .awards .awards-wrapper .awards-slider {
+    width: 120%;
   }
   .main .about {
     padding: 40px 0 50px;
