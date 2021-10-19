@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
       responsive: {
         1410: {
           fixedWidth: 440,
-          gutter: 100
+          gutter: 30
         }
       },
       prevButton: '.news-slider-button-prev',
