@@ -7,6 +7,7 @@ html {
 *::after {
   box-sizing: inherit;
   transition: all 400ms;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {

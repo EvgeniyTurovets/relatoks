@@ -110,11 +110,9 @@ document.addEventListener('DOMContentLoaded', function() {
       container: '.awards-slider',
       nav: false,
       controls: false,
-      mouseDrag: true,
-      swipeAngle: false,
       fixedWidth: 240,
       speed: 600,
-      gutter: 50,
+      gutter: 20,
       loop: false,
       center: true,
       responsive: {
