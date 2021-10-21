@@ -4382,7 +4382,7 @@ a:visited {
   height: 20px;
   margin: 0 0 0 5px;
 }
-.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint {
+.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .mas-hint {
   display: none;
   position: absolute;
   left: 10px;
@@ -4401,7 +4401,7 @@ a:visited {
   letter-spacing: 0.02em;
   color: #2D3341;
 }
-.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint::after {
+.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .mas-hint::after {
   position: absolute;
   z-index: 11;
   left: -2px;
@@ -4411,7 +4411,7 @@ a:visited {
   height: 50px;
   background: url("../img/elements/triangle.svg") no-repeat 50% 50%/cover;
 }
-.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint .title {
+.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .mas-hint .title {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -4419,13 +4419,13 @@ a:visited {
   letter-spacing: 0.02em;
   color: #2D3341;
 }
-.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint .text .text-bold {
+.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .mas-hint .text .text-bold {
   font-style: normal;
 }
-.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint .text:not(:last-child) {
+.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .mas-hint .text:not(:last-child) {
   margin: 0 0 20px;
 }
-.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon:hover .injector-hint {
+.calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon:hover .mas-hint {
   display: block;
 }
 .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .muscle-adding {
@@ -4470,8 +4470,7 @@ a:visited {
   margin: 0 20px 0 0;
   font-size: 16px;
   line-height: 22px;
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
+  text-decoration: underline;
   color: #0033A1;
 }
 .calculator .main-content .small-container .content .neurology-info .body-container .table .row .mas {
@@ -4626,7 +4625,7 @@ a:visited {
 }
 @media (max-width: 1410px) {
   .calculator {
-    margin: 50px 0 0;
+    margin: 60px 0 0;
   }
   .calculator .title-line-yellow,
 .calculator .title-line-blue,
@@ -4662,7 +4661,6 @@ a:visited {
   }
   .calculator .main-content .small-container .main-content-wrapper .control {
     flex-direction: column;
-    width: 100%;
     height: auto;
   }
   .calculator .main-content .small-container .main-content-wrapper .control button {
@@ -4688,26 +4686,11 @@ a:visited {
     margin: 30px 0 0;
   }
   .calculator .main-content .small-container .content .cosmetology-info .subtitle {
-    padding: 20px 0;
+    padding: 10px 0;
     margin: 0 0 30px;
     font-size: 16px;
     line-height: 24px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .select-title {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: #595E65;
-    margin: 0 0 15px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .select-title .title-icon {
-    background: url("../img/elements/help.svg") no-repeat 50% 50%/cover;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    margin: 0 0 0 5px;
+    border: none;
   }
   .calculator .main-content .small-container .content .cosmetology-info .select-title .title-icon .injector-hint {
     width: 60vw;
@@ -4722,533 +4705,87 @@ a:visited {
     list-style: disc;
     margin: 0 0 15px 20px;
   }
-  .calculator .main-content .small-container .content .cosmetology-info .injector {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    margin: 0 0 25px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .injector .left-part {
-    height: 18px;
-    position: absolute;
-    left: 100px;
-    top: calc(50% - 9px);
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .injector .right-part {
-    height: 30px;
-    position: absolute;
-    right: 100px;
-    top: calc(50% - 15px);
-  }
   .calculator .main-content .small-container .content .cosmetology-info .dose-select {
-    position: relative;
-    width: 100%;
-    display: block;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #2D3341;
-    margin: 0 0 40px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value {
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    background: #F3F3F3;
-    border-radius: 5px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value .value {
-    display: flex;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value .value .input {
-    display: none;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value .value .input:checked + .input-text {
-    display: block;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value .value .input-text {
-    display: none;
-    width: 100%;
-    margin: 0;
-    padding: 14px 20px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value .icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    width: 10px;
-    opacity: 0.3;
-    transition: 0.2s ease;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value:focus + .list {
-    opacity: 1;
-    -webkit-animation-name: none;
-    animation-name: none;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value:focus + .list .option {
-    cursor: pointer;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .current-value:focus .icon {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .list {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    max-height: 254px;
-    overflow-y: auto;
-    padding: 0;
-    list-style: none;
-    font-weight: 400;
-    opacity: 0;
-    background-color: #e6eff8;
-    -webkit-animation-name: HideList;
-    animation-name: HideList;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: step-start;
-    animation-timing-function: step-start;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 5px 5px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .list .option {
-    display: block;
-    padding: 14px 20px;
-    background-color: #fff;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .list .option:hover, .calculator .main-content .small-container .content .cosmetology-info .dose-select .list .option:focus {
-    background-color: #e6eff8;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .list li:not(:last-child) > .option {
-    border-bottom: 1px solid #D4D7DB;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .list li:last-child > .option {
-    border-radius: 0 0 5px 5px;
-  }
-  @-webkit-keyframes HideList {
-    from {
-      transform: scaleY(1);
-    }
-    to {
-      transform: scaleY(0);
-    }
-  }
-  @keyframes HideList {
-    from {
-      transform: scaleY(1);
-    }
-    to {
-      transform: scaleY(0);
-    }
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .dose-select .input-sub-text {
-    display: block;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 15px;
-    color: #595E65;
-    padding: 10px 0 0;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .calculation {
-    display: none;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .calculation.active {
-    display: flex;
-    justify-content: center;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .calculation .calculation-button {
-    font-family: "Open Sans";
-    background: #0033A1;
-    border-radius: 100px;
-    padding: 14px 30px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #FFFFFF;
-    padding: 14px 110px;
-    cursor: pointer;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .calculation .calculation-button[disabled] {
-    background: #A4A8AC;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result {
-    display: none;
-    border: 2px solid #FBCBBB;
-    border-radius: 20px;
-    padding: 35px 40px 40px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result.active {
-    display: block;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .title {
-    font-family: Tahoma;
-    font-size: 24px;
-    line-height: 29px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .list {
-    margin: 0 0 40px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .list .row {
-    display: flex;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .list .row:not(:last-child) {
-    margin: 0 0 20px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .list .row:last-child {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .list .row .first-column {
-    display: flex;
-    position: relative;
-    width: 65%;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .list .row .first-column::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 22px;
-    border-bottom: 1px dashed #2D3341;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .list .row .first-column .text {
-    position: relative;
-    z-index: 3;
-    background: #ffffff;
-    text-transform: uppercase;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .buttons-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .buttons-container .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 33.33%;
-    padding: 14px 0;
-    border-radius: 100px;
-    font-size: 16px;
-    line-height: 22px;
-    color: #0033A1;
-    border: 1px solid #0033A1;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .buttons-container .button:not(:last-child) {
-    margin: 0 10px 0 0;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .buttons-container .button:last-child {
-    background: #0033A1;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #FFFFFF;
-  }
-  .calculator .main-content .small-container .content .cosmetology-info .result .buttons-container .button img {
-    margin: 0 10px 0 0;
-  }
-  .calculator .main-content .small-container .content .neurology-info {
-    display: none;
-    margin: 50px 0 0;
-  }
-  .calculator .main-content .small-container .content .neurology-info.active {
-    display: block;
-  }
-  .calculator .main-content .small-container .content .neurology-info .subtitle {
-    padding: 30px 0;
-    margin: 0 0 50px;
-    border-top: 1px solid #BE9230;
-    border-bottom: 1px solid #BE9230;
-    font-size: 18px;
-    line-height: 30px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .select-title {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: #595E65;
-    margin: 0 0 15px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select {
-    position: relative;
-    width: 100%;
-    display: block;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #2D3341;
-    margin: 0 0 40px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value {
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    background: #F3F3F3;
-    border-radius: 5px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value .value {
-    display: flex;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value .value .input {
-    display: none;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value .value .input:checked + .input-text {
-    display: block;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value .value .input-text {
-    display: none;
-    width: 100%;
-    margin: 0;
-    padding: 14px 20px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value .icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    width: 10px;
-    opacity: 0.3;
-    transition: 0.2s ease;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value:focus + .list {
-    opacity: 1;
-    -webkit-animation-name: none;
-    animation-name: none;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value:focus + .list .option {
-    cursor: pointer;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .current-value:focus .icon {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .list {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    max-height: 254px;
-    overflow-y: auto;
-    padding: 0;
-    list-style: none;
-    font-weight: 400;
-    opacity: 0;
-    background-color: #e6eff8;
-    -webkit-animation-name: HideList;
-    animation-name: HideList;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: step-start;
-    animation-timing-function: step-start;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 5px 5px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .list .option {
-    display: block;
-    padding: 14px 20px;
-    background-color: #fff;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .list .option:hover, .calculator .main-content .small-container .content .neurology-info .indications-select .list .option:focus {
-    background-color: #e6eff8;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .list li:not(:last-child) > .option {
-    border-bottom: 1px solid #D4D7DB;
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .list li:last-child > .option {
-    border-radius: 0 0 5px 5px;
-  }
-  @keyframes HideList {
-    from {
-      transform: scaleY(1);
-    }
-    to {
-      transform: scaleY(0);
-    }
-  }
-  .calculator .main-content .small-container .content .neurology-info .indications-select .small-text {
-    font-style: italic;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-    color: #595E65;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item {
-    width: calc(50% - 15px);
-    margin-bottom: 50px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item:first-child {
-    margin-right: 30px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select {
-    position: relative;
-    width: 100%;
-    display: block;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #2D3341;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value {
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    background: #F3F3F3;
-    border-radius: 5px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value .value {
-    display: flex;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value .value .input {
-    display: none;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value .value .input:checked + .input-text {
-    display: block;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value .value .input-text {
-    display: none;
-    width: 100%;
-    margin: 0;
-    padding: 14px 20px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value .icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    width: 10px;
-    opacity: 0.3;
-    transition: 0.2s ease;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value:focus + .list {
-    opacity: 1;
-    -webkit-animation-name: none;
-    animation-name: none;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value:focus + .list .option {
-    cursor: pointer;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .current-value:focus .icon {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .list {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    max-height: 254px;
-    overflow-y: auto;
-    padding: 0;
-    list-style: none;
-    font-weight: 400;
-    opacity: 0;
-    background-color: #e6eff8;
-    -webkit-animation-name: HideList;
-    animation-name: HideList;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: step-start;
-    animation-timing-function: step-start;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 5px 5px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .list .option {
-    display: block;
-    padding: 14px 20px;
-    background-color: #fff;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .list .option:hover, .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .list .option:focus {
-    background-color: #e6eff8;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .list li:not(:last-child) > .option {
-    border-bottom: 1px solid #D4D7DB;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .age-select .list li:last-child > .option {
-    border-radius: 0 0 5px 5px;
-  }
-  @keyframes HideList {
-    from {
-      transform: scaleY(1);
-    }
-    to {
-      transform: scaleY(0);
-    }
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .weight-input {
-    position: relative;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .weight-input input {
-    width: 100%;
-    border: none;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #2D3341;
-    background: #F3F3F3;
-    border-radius: 5px;
-    padding: 14px 20px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .selects-container .item .weight-input .error {
-    position: absolute;
-    bottom: -25px;
-    left: 10px;
-    font-style: italic;
-    font-size: 14px;
-    line-height: 20px;
-    color: #DC3434;
-  }
-  .calculator .main-content .small-container .content .neurology-info .title {
-    font-family: Tahoma;
-    font-size: 24px;
-    line-height: 29px;
-    color: #2D3341;
     margin: 0 0 30px;
   }
-  .calculator .main-content .small-container .content .neurology-info .body-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-preview {
-    margin: 0 30px 40px 0;
-    width: 290px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-preview .image {
-    display: block;
+  .calculator .main-content .small-container .content .cosmetology-info .calculation .calculation-button {
+    padding: 14px;
     width: 100%;
-    border: 1px solid #D4D7DB;
-    border-radius: 5px;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result {
+    padding: 25px 20px;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result .title {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 25px;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result .list {
+    margin: 0 0 30px;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result .list .row {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result .list .row:not(:last-child) {
     margin: 0 0 10px;
   }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-preview .sub-text {
-    font-style: italic;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 18px;
-    color: #595E65;
+  .calculator .main-content .small-container .content .cosmetology-info .result .list .row:last-child {
+    font-size: 16px;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result .list .row .first-column::after {
+    height: 18px;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result .buttons-container {
+    flex-direction: column;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result .buttons-container .button {
+    width: 100%;
+    border: 2px solid #0033A1;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .result .buttons-container .button:not(:last-child) {
+    margin: 0 0 10px;
+  }
+  .calculator .main-content .small-container .content .neurology-info {
+    margin: 30px 0 0;
+  }
+  .calculator .main-content .small-container .content .neurology-info .subtitle {
+    padding: 10px 0;
+    margin: 0 0 30px;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
+  .calculator .main-content .small-container .content .neurology-info .indications-select {
+    margin: 0 0 25px;
+  }
+  .calculator .main-content .small-container .content .neurology-info .selects-container {
+    flex-wrap: wrap;
+  }
+  .calculator .main-content .small-container .content .neurology-info .selects-container .item {
+    width: 100%;
+    margin: 0 0 25px;
+  }
+  .calculator .main-content .small-container .content .neurology-info .selects-container .item:first-child {
+    margin-right: 0;
+  }
+  .calculator .main-content .small-container .content .neurology-info .selects-container .item:last-child {
+    margin: 0 0 40px;
+  }
+  .calculator .main-content .small-container .content .neurology-info .title {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 20px;
+  }
+  .calculator .main-content .small-container .content .neurology-info .body-container {
+    flex-direction: column-reverse;
+  }
+  .calculator .main-content .small-container .content .neurology-info .body-container .body-preview {
+    display: none;
   }
   .calculator .main-content .small-container .content .neurology-info .body-container .body-selects {
-    width: calc(100% - 290px - 30px);
-    margin: 0 0 40px 0;
+    width: 100%;
+    margin: 0 0 25px;
   }
   .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .part-select,
 .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .muscle-select,
@@ -5260,7 +4797,7 @@ a:visited {
     font-size: 16px;
     line-height: 22px;
     color: #2D3341;
-    margin: 0 0 40px;
+    margin: 0 0 25px;
   }
   .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .part-select .current-value,
 .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .muscle-select .current-value,
@@ -5372,6 +4909,14 @@ a:visited {
 .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .mas-select .list li:last-child > .option {
     border-radius: 0 0 5px 5px;
   }
+  @-webkit-keyframes HideList {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0);
+    }
+  }
   @keyframes HideList {
     from {
       transform: scaleY(1);
@@ -5380,253 +4925,81 @@ a:visited {
       transform: scaleY(0);
     }
   }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon {
-    background: url("../img/elements/help.svg") no-repeat 50% 50%/cover;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    margin: 0 0 0 5px;
+  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .mas-hint {
+    width: 60vw;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 18px;
   }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint {
-    display: none;
-    position: absolute;
-    left: 10px;
-    bottom: 25px;
-    z-index: 10;
-    width: 350px;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
-    padding: 20px;
-    border-radius: 20px;
-    text-transform: none;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-    color: #2D3341;
+  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .mas-hint .text:not(:last-child) {
+    margin: 0 0 15px;
   }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint::after {
-    position: absolute;
-    z-index: 11;
-    left: -2px;
-    bottom: -25px;
-    content: "";
-    width: 30px;
-    height: 50px;
-    background: url("../img/elements/triangle.svg") no-repeat 50% 50%/cover;
+  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .mas-hint .list {
+    list-style: disc;
+    margin: 0 0 15px 20px;
   }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint .title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-    color: #2D3341;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint .text .text-bold {
-    font-style: normal;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon .injector-hint .text:not(:last-child) {
-    margin: 0 0 20px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .title-icon:hover .injector-hint {
-    display: block;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .muscle-adding {
-    border: 1px solid #0033A1;
-    border-radius: 100px;
-    padding: 10px 30px;
-    font-size: 14px;
-    line-height: 19px;
-    color: #0033A1;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table {
-    width: 100%;
-    margin: 0 0 40px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table .title-row,
-.calculator .main-content .small-container .content .neurology-info .body-container .table .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #D4D7DB;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table .title-row {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: #2D3341;
-    padding: 0 0 20px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table .title-row .name {
-    width: calc(65% - 20px);
-    margin: 0 20px 0 0;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table .title-row .mas {
-    width: 35%;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table .row {
-    padding: 20px 0;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table .row .name {
-    width: calc(65% - 20px);
-    margin: 0 20px 0 0;
-    font-size: 16px;
-    line-height: 22px;
-    -webkit-text-decoration-line: underline;
-    text-decoration-line: underline;
-    color: #0033A1;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table .row .mas {
-    width: calc(35% - 20px - 20px);
-    margin: 0 20px 0 0;
-    font-size: 16px;
-    line-height: 22px;
-    color: #595E65;
-  }
-  .calculator .main-content .small-container .content .neurology-info .body-container .table .row .remove {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    background: url("../img/elements/cross.svg") no-repeat 50% 50%/cover;
-    border-radius: 50%;
-  }
-  .calculator .main-content .small-container .content .neurology-info .calculation {
-    display: none;
-  }
-  .calculator .main-content .small-container .content .neurology-info .calculation.active {
+  .calculator .main-content .small-container .content .neurology-info .body-container .body-selects .muscle-adding-wrapper {
     display: flex;
     justify-content: center;
   }
-  .calculator .main-content .small-container .content .neurology-info .calculation .calculation-button {
-    font-family: "Open Sans";
-    background: #0033A1;
-    border-radius: 100px;
-    padding: 14px 30px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #FFFFFF;
-    padding: 14px 110px;
-    cursor: pointer;
+  .calculator .main-content .small-container .content .neurology-info .body-container .table .title-row .mas {
+    display: none;
   }
-  .calculator .main-content .small-container .content .neurology-info .calculation .calculation-button[disabled] {
-    background: #A4A8AC;
+  .calculator .main-content .small-container .content .neurology-info .body-container .table .row {
+    position: relative;
+  }
+  .calculator .main-content .small-container .content .neurology-info .body-container .table .row .name {
+    width: calc(100% - 40px);
+    margin: 0 15px 30px 0;
+    text-decoration: underline;
+  }
+  .calculator .main-content .small-container .content .neurology-info .body-container .table .row .mas {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 15px;
+  }
+  .calculator .main-content .small-container .content .neurology-info .body-container .table .row .mas::before {
+    content: "Уровень MAS: ";
+  }
+  .calculator .main-content .small-container .content .neurology-info .calculation .calculation-button {
+    width: 100%;
+    padding: 14px;
   }
   .calculator .main-content .small-container .content .neurology-info .result {
-    display: none;
-    border: 2px solid #83B1DB;
-    border-radius: 20px;
-    padding: 35px 40px 40px;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result.active {
-    display: block;
+    padding: 25px 20px;
   }
   .calculator .main-content .small-container .content .neurology-info .result .title {
-    font-family: Tahoma;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 25px;
   }
   .calculator .main-content .small-container .content .neurology-info .result .list .row {
     display: flex;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 21px;
   }
   .calculator .main-content .small-container .content .neurology-info .result .list .row:not(:last-child) {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
   }
   .calculator .main-content .small-container .content .neurology-info .result .list .row:last-child {
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #DC3434;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .list .row:last-child .first-column::after {
-    border-bottom: 1px dashed #DC3434;
+    font-size: 16px;
   }
   .calculator .main-content .small-container .content .neurology-info .result .list .row .first-column {
-    display: flex;
-    position: relative;
-    width: 65%;
+    width: 70%;
   }
   .calculator .main-content .small-container .content .neurology-info .result .list .row .first-column::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 22px;
-    border-bottom: 1px dashed #2D3341;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .list .row .first-column .text {
-    position: relative;
-    z-index: 3;
-    background: #ffffff;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .sub-text {
-    margin: 20px 0 0;
-    font-style: italic;
-    font-size: 14px;
-    line-height: 20px;
-    color: #DC3434;
+    height: 18px;
   }
   .calculator .main-content .small-container .content .neurology-info .result .buttons-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 40px 0 0;
+    margin: 30px 0 0;
+    flex-direction: column;
   }
   .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 33.33%;
-    padding: 14px 0;
-    border-radius: 100px;
-    font-size: 16px;
-    line-height: 22px;
-    color: #0033A1;
-    border: 1px solid #0033A1;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button .mail-icon {
-    background: url("../img/icons/mail-empty.svg") no-repeat 50% 50%/cover;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 5px 0 0;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button .phone-icon {
-    background: url("../img/icons/phone-empty.svg") no-repeat 50% 50%/cover;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 5px 0 0;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button[disabled] {
-    color: #A4A8AC;
-    border: 1px solid #A4A8AC;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button[disabled] .mail-icon {
-    background: url("../img/icons/mail-empty-disabled.svg") no-repeat 50% 50%/cover;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button[disabled] .phone-icon {
-    background: url("../img/icons/phone-empty-disabled.svg") no-repeat 50% 50%/cover;
+    width: 100%;
+    border: 2px solid #0033A1;
   }
   .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button:not(:last-child) {
-    margin: 0 10px 0 0;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button:last-child {
-    border: none;
-    background: #0033A1;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #FFFFFF;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button:last-child[disabled] {
-    background: #A4A8AC;
-  }
-  .calculator .main-content .small-container .content .neurology-info .result .buttons-container .button img {
-    margin: 0 10px 0 0;
+    margin: 0 0 10px;
   }
 }
