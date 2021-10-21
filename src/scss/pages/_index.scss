@@ -356,18 +356,126 @@
       .slide {
         position: relative;
         opacity: 0.4;
-        transition: opacity 400ms, transform 400ms;
 
         .inner-container {
+          position: relative;
           height: 380px;
-          background: #0033A1;
           border-radius: 20px;
+
+          & * {
+            transition: none;
+          }
+
+          &::after,
+          &::before {       
+            z-index: 10;
+            position: absolute;  
+            font-family: Tahoma;
+            font-size: 20px;
+            line-height: 24px;
+            color: #F3D79A;
+            bottom: 30px;
+          }
+
+          &::after {
+            content: 'после';
+            right: 30px;
+          }
+
+          &::before {
+            content: 'до';
+            left: 30px;
+          }
+
+          .after,
+          .before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: auto 380px;
+          }
+
+          .before {
+            width: 50%;
+            border-radius: 20px 0 0 20px;
+          }
+
+          .range {
+            position: absolute;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            background: none;
+            outline: none;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 4px;
+              height: 380px;
+              background: white;
+              cursor: pointer;
+            }
+
+            &::-moz-range-thumb {
+              width: 4px;
+              height: 380px;
+              background: white;
+              cursor: pointer;
+            }
+          }
+
+          .range-button {
+            pointer-events: none;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+            left: calc(50% - 28px);
+            top: calc(50% - 28px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &:after,
+            &:before {
+              position: absolute;
+              content: '';
+              padding: 4px;
+              color: white;
+              display: inline-block;
+              border: solid #FFFFFF;
+              border-width: 0 2px 2px 0;
+            }
+
+            &:after {
+              right: 10px;
+              transform: rotate(-45deg);
+            }
+            
+            &:before {
+              left: 10px;
+              transform: rotate(135deg);
+            }
+          }
         }
       }
 
       .tns-slide-active ~ .tns-slide-active {
         opacity: 1;
-        transform: scale(1.32);
+        transform: scale(1.32) translateX(18px);
       }
 
       .tns-slide-active ~ .tns-slide-active + .tns-slide-active {
@@ -447,21 +555,18 @@
 
         .inner-container {
           position: relative;
-          height: 440px;
           box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
           border-radius: 20px;
-          padding: 275px 25px 50px;
+          padding: 25px;
 
           .image {
-            position: absolute;
-            top: -50px;
-            left: 25px;
-            width: 390px;
+            width: 100%;
             height: 300px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             border-radius: 8px;
+            margin: 0 0 25px;
           }
 
           .date {
@@ -1023,7 +1128,7 @@
   // mobile
 
   @include small-screen {
-    margin: 50px 0 0;
+    margin: 60px 0 0;
     
     .title {  
       font-size: 30px;
@@ -1228,86 +1333,91 @@
     }
   
     .result {
-      @include bg-cover('../img/backgrounds/bubbles-results.jpg');
-      padding: 0 0 80px;
+      padding: 0 0 60px;
   
       .title-wrapper {
         @include flex-all-sb;
-        padding: 0 0 555px;
+        padding: 0 0 15px;
   
         .line {
-          width: 450px;
-          height: 2px;
-          background: #D4D7DB;
+          width: 30%;
         }
     
         .result-title {
-          font-family: 'Tahoma';
-          font-size: 36px;
-          line-height: 43px;
+          text-align: center;
+          font-size: 30px;
+          line-height: 36px;
         }
       }
   
       .result-slider {
-        position: absolute;
-        bottom: 70px;
+        position: static;
+        margin: 40px 0 0;
   
         .slide {
-          position: relative;
-          opacity: 0.4;
-          transition: opacity 400ms, transform 400ms;
-  
+          opacity: 1;
+
           .inner-container {
-            height: 380px;
-            background: #0033A1;
+            height: 180px;
             border-radius: 20px;
+  
+            &::after,
+            &::before {
+              font-size: 16px;
+              line-height: 19px;
+              bottom: 10px;
+            }
+  
+            &::after {
+              content: 'после';
+              right: 15px;
+            }
+  
+            &::before {
+              content: 'до';
+              left: 15px;
+            }
+  
+            .after,
+            .before {
+              background-size: auto 180px;
+            }
+  
+            .range {
+              &::-webkit-slider-thumb {
+                height: 180px;
+              }
+  
+              &::-moz-range-thumb {
+                height: 180px;
+              }
+            }
           }
         }
   
         .tns-slide-active ~ .tns-slide-active {
-          opacity: 1;
-          transform: scale(1.32);
+          transform: none;
         }
   
         .tns-slide-active ~ .tns-slide-active + .tns-slide-active {
-          opacity: 0.4;
-          transform: scale(1);
+          opacity: 1;
+          transform: none;
         }
       }
   
       .control {
-        @include flex-all-sb;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-  
-        .count {
-          margin: 0 15px;
-        }
-  
-        .result-slider-button-next,
-        .result-slider-button-prev {
-          cursor: pointer;
-          background: url('../img/elements/arrow-left-black.svg') no-repeat 50% 50%;
-          width: 16px;
-          height: 16px;
-        }
-        
-        .result-slider-button-next {
-          transform: matrix(-1, 0, 0, 1, 0, 0);
-        }
+        left: calc(50% - 44px);
+        bottom: unset;
+        top: 0;
       }
     }
   
     .news {
-      padding: 0 0 150px;
+      padding: 50px 0 120px;
       
       .title-wrapper {
         margin: 0;
-        padding: 0 0 430px;
+        padding: 0 0 460px;
   
         .title {
           margin: 0 0 0 45px;
@@ -1318,7 +1428,7 @@
           width: calc(100% - 40px);
           position: absolute;
           text-align: center;
-          bottom: -100px;
+          bottom: -70px;
           font-size: 16px;
           line-height: 22px;
           text-transform: none;
@@ -1334,12 +1444,9 @@
         margin: 0;
   
         .slide {  
-          .inner-container {
-            height: 360px;
-            padding: 200px 25px 50px;
-  
+          .inner-container {  
             .image {
-              width: calc(100% - 50px);
+              width: 100%;
               height: 230px;
             }
   
@@ -1354,7 +1461,7 @@
   
       .control {
         left: calc(50% - 44px);
-        bottom: -30px;
+        bottom: 420px;
       }
     }
   
@@ -1395,10 +1502,10 @@
     }
   
     .about {
-      padding: 40px 0 50px;
+      padding: 40px 0;
   
       .title {
-        margin: 0 0 0 45px;
+        margin: 0 0 30px 45px;
       }
   
       .slider-wrapper {
@@ -1449,8 +1556,9 @@
       }
   
       .control {
-        justify-content: center;
-        position: static;
+        left: calc(50% - 44px);
+        bottom: unset;
+        top: -10px;
       }
     }
   
@@ -1462,7 +1570,7 @@
       }
   
       .title {
-        margin: 0 0 25px 65px;
+        margin: 0 20px 25px 65px;
       }
   
       .massage {

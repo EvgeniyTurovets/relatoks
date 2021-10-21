@@ -52,8 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
       container: '.main-slider',
       items: 1,
       nav: false,
-      // mouseDrag: true,
-      // swipeAngle: false,
       speed: 600,
       prevButton: '.main-slider-button-prev',
       nextButton: '.main-slider-button-next',
@@ -63,25 +61,48 @@ document.addEventListener('DOMContentLoaded', function() {
   if(document.querySelector('.result-slider')) {
     const resultSlider = tns({
       container: '.result-slider',
-      fixedWidth: 700,
+      touch: false,
+      swipeAngle: false,
+      fixedWidth: 330,
       center: true,
       nav: false,
-      gutter: 150,
       speed: 600,
+      gutter: 200,
+      responsive: {
+        1410: {
+          fixedWidth: 700,
+          gutter: 150
+        }
+      },
       prevButton: '.result-slider-button-prev',
       nextButton: '.result-slider-button-next'
     });
 
-    const info = resultSlider.getInfo();
-    const slides = document.querySelectorAll('.result-slider .tns-slide-active:first-of-type');
-    console.log(slides)
-
-    // resultSlider.events.on('indexChanged', () => {
-    //   const newInfo = resultSlider.getInfo();
-    //   document.querySelector(selector).innerHTML = `${newInfo.displayIndex}/${newInfo.slideCount}`;
-    // });
-
     sliderCounter(resultSlider, '.result .count');
+
+    const slideList = document.querySelectorAll('.result-slider .slide');
+    
+    slideList.forEach(element => {
+      const range = element.querySelector('.range');
+      const beforeSlide = element.querySelector('.before');
+      const rangeButton = element.querySelector('.range-button');
+
+      const changeFunc = (e) => {
+        const rangePos = e.target.value;
+
+        beforeSlide.style.width = `${rangePos}%`;
+        if (rangePos >= 98) {
+          beforeSlide.style.borderRadius = '20px';
+        } else {
+          beforeSlide.style.borderRadius = '20px 0 0 20px';
+        }
+
+        rangeButton.style.left = `calc(${rangePos}% - 28px)`;
+      }
+
+      range.onchange = changeFunc;
+      range.oninput = changeFunc;
+    })
   }
 
   if(document.querySelector('.news-slider')) {
@@ -94,8 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
       speed: 600,
       responsive: {
         1410: {
-          fixedWidth: 440,
-          gutter: 30
+          fixedWidth: 440
         }
       },
       prevButton: '.news-slider-button-prev',
@@ -130,10 +150,11 @@ document.addEventListener('DOMContentLoaded', function() {
       container: '.about-slider',
       nav: false,
       speed: 600,
+      gutter: 100,
       responsive: {
         1410: {
           fixedWidth: 1410,
-          gutter: 100
+          gutter: 400
         }
       },
       prevButton: '.about-slider-button-prev',

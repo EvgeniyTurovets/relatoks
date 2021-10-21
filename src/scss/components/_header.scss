@@ -108,18 +108,18 @@
       padding: 10px 0;
 
       .logo {
-        height: 30px;
+        height: 40px;
       }
 
       .menu {
         box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.07);
         position: fixed;
         left: 100vw;
-        top: 49px;
+        top: 59px;
         align-items: flex-start;
         justify-content: flex-start;
         width: 100%;
-        min-height: calc(100vh - 49px);
+        min-height: calc(100vh - 59px);
         background: #FFFFFF;
         flex-direction: column;
         padding: 0 20px 20px;
@@ -238,12 +238,12 @@
       .burger {
         display: flex;
         flex-direction: column;
-        width: 20px;
+        width: 30px;
         cursor: pointer;
 
         span {
-          background: #000000;
-          height: 2px;
+          background: #2D3341;
+          height: 4px;
           transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
           &:nth-of-type(1),
@@ -256,7 +256,7 @@
           }
 
           &:not(:last-of-type) {
-            margin: 0 0 3px;
+            margin: 0 0 5px;
           }
         }
 
@@ -266,7 +266,7 @@
 
         .burger-checkbox:checked ~ span:nth-of-type(1) {
           transform-origin: bottom;
-          transform: rotatez(45deg) translate(10px, 0px)
+          transform: rotatez(45deg) translate(16px, 1px)
         }
         
         .burger-checkbox:checked ~ span:nth-of-type(2) {
@@ -277,7 +277,7 @@
         .burger-checkbox:checked ~ span:nth-of-type(3) {
           transform-origin: bottom;
           width: 50%;
-          transform: translate(2px, -9px) rotatez(45deg);
+          transform: translate(2px, -15px) rotatez(45deg);
         }
       }
     }
