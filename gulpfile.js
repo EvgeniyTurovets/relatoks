@@ -57,7 +57,7 @@ const scripts = () => {
 			presets: ['@babel/env']
 		}))
     .pipe(concat('main.js'))
-    .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
+    // .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(dest('./app/js'))
     .pipe(browserSync.stream());
