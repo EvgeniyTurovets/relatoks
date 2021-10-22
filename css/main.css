@@ -2178,6 +2178,8 @@ a:visited {
 }
 .answer .main-content .answer-list .list-item details > summary {
   list-style: none;
+  position: relative;
+  padding: 0 70px 0 0;
 }
 .answer .main-content .answer-list .list-item details summary:before {
   content: "";
@@ -2185,7 +2187,7 @@ a:visited {
   height: 50px;
   border-radius: 50%;
   right: 0;
-  top: 22px;
+  top: calc(50% - 25px);
   position: absolute;
   display: block;
   background: #0033A1 url("../img/elements/plus.svg") no-repeat 50% 50%;
@@ -2196,7 +2198,7 @@ a:visited {
   height: 50px;
   border-radius: 50%;
   right: 0;
-  top: 22px;
+  top: calc(50% - 25px);
   position: absolute;
   display: block;
   background: #0033A1 url("../img/elements/minus.svg") no-repeat 50% 50%;
@@ -2342,6 +2344,103 @@ a:visited {
   font-size: 16px;
   line-height: 22px;
 }
+@media (max-width: 1410px) {
+  .answer {
+    margin: 60px 0 0;
+  }
+  .answer .title-line {
+    padding: 35px 0;
+  }
+  .answer .title-line .main-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .answer .breadcrumb .breadcrumb-wrapper {
+    margin: 20px 0;
+  }
+  .answer .breadcrumb .breadcrumb-wrapper .item {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .answer .main-content .answer-list {
+    padding: 0;
+  }
+  .answer .main-content .answer-list .list-item {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .answer .main-content .answer-list .list-item .content {
+    padding: 20px 0 0 10px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .answer .main-content .answer-list .list-item details > summary {
+    padding: 0 50px 0 0;
+  }
+  .answer .main-content .answer-list .list-item details summary:before {
+    width: 36px;
+    height: 36px;
+    top: calc(50% - 18px);
+    background-size: 50%;
+  }
+  .answer .main-content .answer-list .list-item details[open] summary:before {
+    width: 36px;
+    height: 36px;
+    top: calc(50% - 18px);
+    background-size: 50%;
+  }
+  .answer .question .question-form {
+    padding: 30px 20px 40px;
+  }
+  .answer .question .question-form .title {
+    margin: 0 0 30px 45px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .answer .question .question-form .title::before {
+    left: -45px;
+    width: 30px;
+  }
+  .answer .question .question-form .label-wrapper {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .answer .question .question-form .input-container {
+    display: block;
+  }
+  .answer .question .question-form .input-container .item {
+    margin: 0 0 15px;
+  }
+  .answer .question .question-form .input-container .input-wrapper input {
+    width: 100%;
+  }
+  .answer .question .question-form .checkbox-wrapper {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .answer .question .question-form .recaptcha-wrapper {
+    margin: 20px 0 30px;
+  }
+  .answer .question .question-form .submit-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .answer .question .question-form .submit-wrapper .submit-button {
+    font-family: "Open Sans";
+    background: #0033A1;
+    border-radius: 100px;
+    padding: 14px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 14px 56px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 
 .news .title-line {
   background: url("../img/backgrounds/title-line-yellow.jpg") no-repeat 50% 50%/cover;
@@ -2384,7 +2483,7 @@ a:visited {
   grid-template-columns: 1fr 1fr 1fr;
   -moz-column-gap: 30px;
   column-gap: 30px;
-  row-gap: 40px;
+  row-gap: 25px;
 }
 .news .main-content .news-list .news-item {
   position: relative;
@@ -2451,6 +2550,47 @@ a:visited {
 .news .pagination .pagination-container li a {
   display: block;
   padding: 9px 15px;
+}
+@media (max-width: 1410px) {
+  .news {
+    margin: 60px 0 0;
+  }
+  .news .title-line {
+    padding: 35px 0;
+  }
+  .news .title-line .main-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .news .breadcrumb .breadcrumb-wrapper {
+    margin: 20px 0;
+  }
+  .news .breadcrumb .breadcrumb-wrapper .item {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .news .main-content .news-list {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+  .news .main-content .news-list .news-item {
+    width: 100%;
+    padding: 25px;
+  }
+  .news .main-content .news-list .news-item .image {
+    height: 230px;
+  }
+  .news .main-content .news-list .news-item .date {
+    margin: 0 0 5px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .news .main-content .news-list .news-item .link a {
+    font-size: 16px;
+    line-height: 24px;
+    height: 96px;
+  }
 }
 
 .news-detailed .title-line {
@@ -2596,7 +2736,7 @@ a:visited {
   line-height: 19px;
   text-transform: uppercase;
   color: #3A404F;
-  margin: 0 0 80px 120px;
+  margin: 0 0 30px 120px;
 }
 .news-detailed .interesting .title::before {
   position: absolute;
@@ -2615,20 +2755,18 @@ a:visited {
 .news-detailed .interesting .interesting-wrapper .news-item {
   position: relative;
   width: 450px;
-  height: 440px;
   box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
-  padding: 275px 30px 50px;
+  padding: 30px;
 }
 .news-detailed .interesting .interesting-wrapper .news-item .image {
-  position: absolute;
-  top: -50px;
-  left: 30px;
-  width: 390px;
+  width: 100%;
   height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 8px;
+  margin: 0 0 25px;
 }
 .news-detailed .interesting .interesting-wrapper .news-item .date {
   margin: 0 0 10px;
@@ -2648,6 +2786,112 @@ a:visited {
 }
 .news-detailed .interesting .interesting-wrapper .news-item .link a:hover {
   color: #0033A1;
+}
+@media (max-width: 1410px) {
+  .news-detailed {
+    margin: 60px 0 0;
+  }
+  .news-detailed .title-line {
+    padding: 20px 0 0;
+  }
+  .news-detailed .title-line .main-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .news-detailed .breadcrumb .breadcrumb-wrapper {
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .news-detailed .breadcrumb .breadcrumb-wrapper .item {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 10px;
+  }
+  .news-detailed .main-content {
+    width: 100%;
+  }
+  .news-detailed .main-content .content {
+    grid-template-columns: 100%;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    padding: 0 0 20px;
+  }
+  .news-detailed .main-content .content .images {
+    margin: 0 0 20px;
+    height: 330px;
+  }
+  .news-detailed .main-content .content .images .news-detailed-slider-button-prev {
+    left: -15px;
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-size: 60%;
+  }
+  .news-detailed .main-content .content .images .news-detailed-slider-button-next {
+    right: -15px;
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-size: 60%;
+  }
+  .news-detailed .main-content .content .images .news-detailed-slider .slide .image-wrapper {
+    height: 330px;
+  }
+  .news-detailed .main-content .content .article .date {
+    margin: 0 0 10px;
+  }
+  .news-detailed .main-content .content .article .sub-title {
+    margin: 0 0 15px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .news-detailed .main-content .content .article .text {
+    line-height: 24px;
+  }
+  .news-detailed .nav-before-after .nav-before-after-wrapper {
+    padding: 15px 0;
+  }
+  .news-detailed .nav-before-after .nav-before-after-wrapper .prev-page,
+.news-detailed .nav-before-after .nav-before-after-wrapper .next-page {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .news-detailed .nav-before-after .nav-before-after-wrapper .prev-page .decorator,
+.news-detailed .nav-before-after .nav-before-after-wrapper .next-page .decorator {
+    display: none;
+  }
+  .news-detailed .interesting {
+    padding: 40px 0;
+  }
+  .news-detailed .interesting .title {
+    margin: 0 0 20px 45px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .news-detailed .interesting .title::before {
+    left: -45px;
+    width: 30px;
+  }
+  .news-detailed .interesting .interesting-wrapper {
+    flex-wrap: wrap;
+  }
+  .news-detailed .interesting .interesting-wrapper .news-item:not(:last-child) {
+    margin: 0 0 20px;
+  }
+  .news-detailed .interesting .interesting-wrapper .news-item .image {
+    height: 230px;
+    margin: 0 0 15px;
+  }
+  .news-detailed .interesting .interesting-wrapper .news-item .date {
+    margin: 0 0 5px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .news-detailed .interesting .interesting-wrapper .news-item .link a {
+    font-size: 16px;
+    line-height: 24px;
+    height: 96px;
+  }
 }
 
 .instruction .title-line {
@@ -2995,7 +3239,7 @@ a:visited {
 .specialists .main-content .specialists-list .first-row {
   display: flex;
   justify-content: center;
-  padding: 180px 0 0;
+  padding: 40px 0 0;
 }
 .specialists .main-content .specialists-list .first-row .specialists-item-big {
   position: relative;
@@ -3003,21 +3247,19 @@ a:visited {
   min-height: 623px;
   box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
-  padding: 280px 30px 40px;
+  padding: 25px;
 }
 .specialists .main-content .specialists-list .first-row .specialists-item-big:not(:last-child) {
   margin: 0 30px 0 0;
 }
 .specialists .main-content .specialists-list .first-row .specialists-item-big .image {
-  position: absolute;
-  top: -150px;
-  left: 30px;
-  width: calc(100% - 60px);
+  width: 100%;
   height: 400px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 8px;
+  margin: 0 0 15px;
 }
 .specialists .main-content .specialists-list .first-row .specialists-item-big .date {
   margin: 0 0 10px;
@@ -3060,7 +3302,7 @@ a:visited {
 .specialists .main-content .specialists-list .second-row {
   display: flex;
   justify-content: center;
-  padding: 190px 0 40px;
+  padding: 40px 0;
 }
 .specialists .main-content .specialists-list .second-row .specialists-item {
   position: relative;
@@ -3068,21 +3310,19 @@ a:visited {
   min-height: 625px;
   box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
-  padding: 230px 30px 50px;
+  padding: 25px;
 }
 .specialists .main-content .specialists-list .second-row .specialists-item:not(:last-child) {
   margin: 0 30px 0 0;
 }
 .specialists .main-content .specialists-list .second-row .specialists-item .image {
-  position: absolute;
-  top: -150px;
-  left: 30px;
-  width: calc(100% - 60px);
+  width: 100%;
   height: 350px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 8px;
+  margin: 0 0 15px;
 }
 .specialists .main-content .specialists-list .second-row .specialists-item .date {
   margin: 0 0 10px;
@@ -3152,6 +3392,86 @@ a:visited {
 .specialists .pagination .pagination-container li a {
   display: block;
   padding: 9px 15px;
+}
+@media (max-width: 1410px) {
+  .specialists {
+    margin: 60px 0 0;
+  }
+  .specialists .title-line {
+    padding: 35px 0;
+  }
+  .specialists .title-line .main-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .specialists .breadcrumb .breadcrumb-wrapper {
+    margin: 20px 0;
+  }
+  .specialists .breadcrumb .breadcrumb-wrapper .item {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .specialists .main-content .specialists-list .first-row {
+    flex-wrap: wrap;
+    padding: 30px 0 0;
+    margin: 0 0 25px;
+  }
+  .specialists .main-content .specialists-list .first-row .specialists-item-big {
+    width: 100%;
+  }
+  .specialists .main-content .specialists-list .first-row .specialists-item-big:not(:last-child) {
+    margin: 0 0 25px;
+  }
+  .specialists .main-content .specialists-list .first-row .specialists-item-big .image {
+    width: 100%;
+    height: 230px;
+  }
+  .specialists .main-content .specialists-list .first-row .specialists-item-big .date {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #BE9230;
+  }
+  .specialists .main-content .specialists-list .first-row .specialists-item-big .link a {
+    font-size: 16px;
+    line-height: 24px;
+    max-height: 96px;
+  }
+  .specialists .main-content .specialists-list .first-row .specialists-item-big .text {
+    font-size: 16px;
+    line-height: 24px;
+    height: 120px;
+  }
+  .specialists .main-content .specialists-list .second-row {
+    flex-wrap: wrap;
+    padding: 0 0 40px;
+  }
+  .specialists .main-content .specialists-list .second-row .specialists-item {
+    width: 100%;
+  }
+  .specialists .main-content .specialists-list .second-row .specialists-item:not(:last-child) {
+    margin: 0 0 25px;
+  }
+  .specialists .main-content .specialists-list .second-row .specialists-item .image {
+    width: 100%;
+    height: 230px;
+  }
+  .specialists .main-content .specialists-list .second-row .specialists-item .date {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #BE9230;
+  }
+  .specialists .main-content .specialists-list .second-row .specialists-item .link a {
+    font-size: 16px;
+    line-height: 24px;
+    max-height: 96px;
+  }
+  .specialists .main-content .specialists-list .second-row .specialists-item .text {
+    font-size: 16px;
+    line-height: 24px;
+    height: 120px;
+  }
 }
 
 .cosmetology .title {
