@@ -814,11 +814,13 @@
 
     .breadcrumb {
       .breadcrumb-wrapper {
+        flex-wrap: wrap;
         margin: 20px 0;
   
         .item {
           font-size: 12px;
           line-height: 14px;
+          margin: 0 0 10px;
         }
       }
     }

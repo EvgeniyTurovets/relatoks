@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
       nextButton: '.news-slider-button-next'
     });
     
-    sliderCounter(newsSlider, '.news .count', 3);
+    sliderCounter(newsSlider, '.actual-news .count', 3);
   }
 
   if(document.querySelector('.awards-slider')) {
@@ -181,7 +181,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if(document.querySelector('.instruction-slider')) {
     const instructionSlider = tns({
       container: '.instruction-slider',
-      touch: false,
       nav: false,
       gutter: 100,
       speed: 600,
@@ -193,8 +192,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if(document.querySelector('.documents-slider')) {
     const documentsSlider = tns({
       container: '.documents-slider',
-      touch: false,
       fixedWidth: 210,
+      loop: false,
       nav: false,
       gutter: 30,
       speed: 600,
