@@ -204,6 +204,24 @@ document.addEventListener('DOMContentLoaded', function() {
     sliderCounter(documentsSlider, '.instruction .count', 4);
   }
 
+  // слайдер для производства
+
+  if(document.querySelector('.production-slider')) {
+    const documentsSlider = tns({
+      container: '.production-slider',
+      loop: false,
+      nav: false,
+      controls: false,
+      gutter: 10,
+      speed: 600,
+      responsive: {
+        1410: {
+          fixedWidth: 340
+        }
+      }
+    });
+  }
+
   // калькулятор
   if(document.querySelector('div.calculator')) {
     const cosmetology = document.getElementById('calculate-cosmetology');

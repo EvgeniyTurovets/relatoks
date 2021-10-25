@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="site-container">
+    @include('partials/header.html')
+    <div class="production">
+
+      <section class="title-line">
+        <div class="container">
+          <h1 class="main-title"><span class="text-bold">Разработка и</span> производство</h1>
+        </div>
+      </section>
+
+      <section class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb-wrapper">
+            <div class="item"><a href="">Главная</a></div>
+            <div class="item"><a href="">О препарате ↓</a></div>
+            <div class="item">Разработка и производство</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-content">
+        <div class="container">
+          <div class="main-contant-wrapper">
+            <div class="navigation">
+              <div class="navigation-list">
+                <div class="link"><a href="">Инструкция и документы</a></div>
+                <div class="link"><a class="active" href="">Разработка и производство</a></div>
+              </div>
+              <div class="navigation-mobile">
+                <button class="navigation-mobile-button">
+                  <div class="text">Разработка и производство</div>
+                  <img class="arrow" src="./img/elements/arrow-down-blue.svg">
+                </button>
+              </div>
+            </div>
+            <div class="content">
+              <div class="title"><span class="text-bold">История</span> ботулотоксина</div>
+              <div class="text">
+                <span class="text-bold">
+                  Разработка российского ботулотоксина (препарата Релатокс) была начата в 2001 г. 
+                  группой научных сотрудников предприятия «Иммунопрепарат», филиал АО «НПО» 
+                  «Микроген» Минздрава России г. Уфа.
+                </span>
+              </div>
+              <div class="text">
+                В его создании использовались современные технологии фильтрации, хроматографии, 
+                лиофилизации, позволяющие обеспечить высокое качество лекарственной новинки. 
+                Также в процессе его выпуска применялись новейшие методы лабораторных анализов.
+              </div>
+              <div class="text">
+                По завершении разработки технологии препарата Релатокс® прошли доклинические 
+                исследования. Было доказано, что препарат не дает токсического эффекта на 
+                животных при кратковременном и долгосрочном введении и не вызывает аллергических 
+                реакций при введении.
+              </div>
+              <div class="text">
+                Успешное завершение экспериментальных исследований позволило начать клинические 
+                испытания препарата Релатокс®. Исследования проводились в Пермской государственной 
+                медицинской академии им. Вагнера и в Саратовском государственном медицинском 
+                университете.
+              </div>
+              <div class="text">
+                На первом этапе контролировались безопасность и переносимость препарата. На 
+                втором этапе изучалась лечебная эффективность препарата в сравнении с общеизвестным 
+                аналогичным лекарственным средством.
+              </div>
+              <div class="text">
+                В результате проведенной работы выявлена высокая эффективность и безопасность 
+                препарата Релатокс®. После прохождения всех формальностей препарат был допущен 
+                на рынок РФ.
+              </div>
+
+              <div class="title"><span class="text-bold">Производство</span> ботулотоксина</div>
+              <div class="text">
+                <span class="text-bold">
+                  Разработка российского ботулотоксина (препарата Релатокс) была начата в 2001 г. 
+                  группой научных сотрудников предприятия «Иммунопрепарат», филиал АО «НПО» 
+                  «Микроген» Минздрава России г. Уфа.
+                </span>
+              </div>
+              <div class="text">
+                В его создании использовались современные технологии фильтрации, хроматографии, 
+                лиофилизации, позволяющие обеспечить высокое качество лекарственной новинки. 
+                Также в процессе его выпуска применялись новейшие методы лабораторных анализов.
+              </div>
+              <div class="text">
+                По завершении разработки технологии препарата Релатокс® прошли доклинические 
+                исследования. Было доказано, что препарат не дает токсического эффекта на 
+                животных при кратковременном и долгосрочном введении и не вызывает аллергических 
+                реакций при введении.
+              </div>
+
+              <div class="slider-wrapper">
+                <div class="production-slider">
+
+                  <div class="slide">
+                    <div 
+                      class="production-image" 
+                      style="background-image: url('./img/backgrounds/production-slide-1.jpg');"
+                    >
+                    </div>
+                  </div>
+
+                  <div class="slide">
+                    <div 
+                      class="production-image"
+                      style="background-image: url('./img/backgrounds/production-slide-2.jpg');"
+                    >
+                    </div>
+                  </div>
+
+                  <div class="slide">
+                    <div 
+                      class="production-image"
+                      style="background-image: url('./img/backgrounds/production-slide-3.png');"
+                    >
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
