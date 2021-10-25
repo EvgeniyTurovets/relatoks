@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
       prevButton: '.news-slider-button-prev',
       nextButton: '.news-slider-button-next'
     });
-    sliderCounter(newsSlider, '.news .count', 3);
+    sliderCounter(newsSlider, '.actual-news .count', 3);
   }
 
   if (document.querySelector('.awards-slider')) {
@@ -176,7 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (document.querySelector('.instruction-slider')) {
     var instructionSlider = tns({
       container: '.instruction-slider',
-      touch: false,
       nav: false,
       gutter: 100,
       speed: 600,
@@ -188,8 +187,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (document.querySelector('.documents-slider')) {
     var documentsSlider = tns({
       container: '.documents-slider',
-      touch: false,
       fixedWidth: 210,
+      loop: false,
       nav: false,
       gutter: 30,
       speed: 600,
@@ -197,6 +196,23 @@ document.addEventListener('DOMContentLoaded', function () {
       nextButton: '.documents-slider-button-next'
     });
     sliderCounter(documentsSlider, '.instruction .count', 4);
+  } // слайдер для производства
+
+
+  if (document.querySelector('.production-slider')) {
+    var _documentsSlider = tns({
+      container: '.production-slider',
+      loop: false,
+      nav: false,
+      controls: false,
+      gutter: 10,
+      speed: 600,
+      responsive: {
+        1410: {
+          fixedWidth: 340
+        }
+      }
+    });
   } // калькулятор
 
 

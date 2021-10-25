@@ -1036,21 +1036,21 @@ a:visited {
 .main .result .control .result-slider-button-next {
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
-.main .news {
+.main .actual-news {
   position: relative;
   padding: 80px 0;
 }
-.main .news .title-wrapper {
+.main .actual-news .title-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 0 0 120px;
   padding: 0 0 530px;
 }
-.main .news .title-wrapper .title {
+.main .actual-news .title-wrapper .title {
   margin: 0;
 }
-.main .news .title-wrapper .all-news {
+.main .actual-news .title-wrapper .all-news {
   position: relative;
   display: inline-block;
   margin: 0 30px 0 0;
@@ -1060,29 +1060,29 @@ a:visited {
   color: #0033A1;
   text-transform: uppercase;
 }
-.main .news .title-wrapper .all-news::after {
+.main .actual-news .title-wrapper .all-news::after {
   position: absolute;
   content: url("../img/elements/arrow-right-yellow.svg");
   right: -30px;
   top: 0;
 }
-.main .news .news-slider {
+.main .actual-news .news-slider {
   position: absolute;
   bottom: 0;
   margin: 0 0 0 120px;
 }
-.main .news .news-slider .slide {
+.main .actual-news .news-slider .slide {
   position: relative;
   opacity: 0.4;
   transition: opacity 400ms;
 }
-.main .news .news-slider .slide .inner-container {
+.main .actual-news .news-slider .slide .inner-container {
   position: relative;
   box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   padding: 25px;
 }
-.main .news .news-slider .slide .inner-container .image {
+.main .actual-news .news-slider .slide .inner-container .image {
   width: 100%;
   height: 300px;
   background-position: center;
@@ -1091,13 +1091,13 @@ a:visited {
   border-radius: 8px;
   margin: 0 0 25px;
 }
-.main .news .news-slider .slide .inner-container .date {
+.main .actual-news .news-slider .slide .inner-container .date {
   margin: 0 0 10px;
   font-size: 16px;
   line-height: 22px;
   color: #BE9230;
 }
-.main .news .news-slider .slide .inner-container .link a {
+.main .actual-news .news-slider .slide .inner-container .link a {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
@@ -1107,13 +1107,13 @@ a:visited {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-.main .news .news-slider .slide .inner-container .link a:hover {
+.main .actual-news .news-slider .slide .inner-container .link a:hover {
   color: #0033A1;
 }
-.main .news .news-slider .tns-slide-active {
+.main .actual-news .news-slider .tns-slide-active {
   opacity: 1;
 }
-.main .news .control {
+.main .actual-news .control {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1124,17 +1124,17 @@ a:visited {
   font-size: 16px;
   line-height: 22px;
 }
-.main .news .control .count {
+.main .actual-news .control .count {
   margin: 0 15px;
 }
-.main .news .control .news-slider-button-next,
-.main .news .control .news-slider-button-prev {
+.main .actual-news .control .news-slider-button-next,
+.main .actual-news .control .news-slider-button-prev {
   cursor: pointer;
   background: url("../img/elements/arrow-left-black.svg") no-repeat 50% 50%;
   width: 16px;
   height: 16px;
 }
-.main .news .control .news-slider-button-next {
+.main .actual-news .control .news-slider-button-next {
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 .main .video {
@@ -1815,17 +1815,17 @@ a:visited {
     bottom: unset;
     top: 0;
   }
-  .main .news {
+  .main .actual-news {
     padding: 50px 0 120px;
   }
-  .main .news .title-wrapper {
+  .main .actual-news .title-wrapper {
     margin: 0;
     padding: 0 0 460px;
   }
-  .main .news .title-wrapper .title {
+  .main .actual-news .title-wrapper .title {
     margin: 0 0 0 45px;
   }
-  .main .news .title-wrapper .all-news {
+  .main .actual-news .title-wrapper .all-news {
     font-family: "Open Sans";
     background: #0033A1;
     border-radius: 100px;
@@ -1842,22 +1842,22 @@ a:visited {
     line-height: 22px;
     text-transform: none;
   }
-  .main .news .title-wrapper .all-news::after {
+  .main .actual-news .title-wrapper .all-news::after {
     display: none;
   }
-  .main .news .news-slider {
+  .main .actual-news .news-slider {
     margin: 0;
   }
-  .main .news .news-slider .slide .inner-container .image {
+  .main .actual-news .news-slider .slide .inner-container .image {
     width: 100%;
     height: 230px;
   }
-  .main .news .news-slider .slide .inner-container .link a {
+  .main .actual-news .news-slider .slide .inner-container .link a {
     font-size: 16px;
     line-height: 24px;
     height: 72px;
   }
-  .main .news .control {
+  .main .actual-news .control {
     left: calc(50% - 44px);
     bottom: 420px;
   }
@@ -2356,11 +2356,13 @@ a:visited {
     line-height: 29px;
   }
   .answer .breadcrumb .breadcrumb-wrapper {
+    flex-wrap: wrap;
     margin: 20px 0;
   }
   .answer .breadcrumb .breadcrumb-wrapper .item {
     font-size: 12px;
     line-height: 14px;
+    margin: 0 0 10px;
   }
   .answer .main-content .answer-list {
     padding: 0;
@@ -2563,11 +2565,13 @@ a:visited {
     line-height: 29px;
   }
   .news .breadcrumb .breadcrumb-wrapper {
+    flex-wrap: wrap;
     margin: 20px 0;
   }
   .news .breadcrumb .breadcrumb-wrapper .item {
     font-size: 12px;
     line-height: 14px;
+    margin: 0 0 10px;
   }
   .news .main-content .news-list {
     grid-template-columns: 1fr;
@@ -2934,7 +2938,7 @@ a:visited {
   -moz-column-gap: 30px;
   column-gap: 30px;
 }
-.instruction .main-content .main-contant-wrapper .navigation {
+.instruction .main-content .main-contant-wrapper .navigation .navigation-list {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -2947,29 +2951,33 @@ a:visited {
   box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
 }
-.instruction .main-content .main-contant-wrapper .navigation .link {
+.instruction .main-content .main-contant-wrapper .navigation .navigation-list .link {
   width: 100%;
   padding: 15px 10px 15px 0;
 }
-.instruction .main-content .main-contant-wrapper .navigation .link:not(:last-child) {
+.instruction .main-content .main-contant-wrapper .navigation .navigation-list .link:not(:last-child) {
   border-bottom: 1px solid #D4D7DB;
 }
-.instruction .main-content .main-contant-wrapper .navigation a {
+.instruction .main-content .main-contant-wrapper .navigation .navigation-list a {
   position: relative;
   display: block;
   width: 100%;
 }
-.instruction .main-content .main-contant-wrapper .navigation a.active, .instruction .main-content .main-contant-wrapper .navigation a:hover {
+.instruction .main-content .main-contant-wrapper .navigation .navigation-list a.active, .instruction .main-content .main-contant-wrapper .navigation .navigation-list a:hover {
   color: #0033A1;
 }
-.instruction .main-content .main-contant-wrapper .navigation a.active:after, .instruction .main-content .main-contant-wrapper .navigation a:hover:after {
+.instruction .main-content .main-contant-wrapper .navigation .navigation-list a.active:after, .instruction .main-content .main-contant-wrapper .navigation .navigation-list a:hover:after {
   content: "›";
   position: absolute;
+  top: calc(50% - 8px);
   right: -10px;
   color: #BE9230;
 }
-.instruction .main-content .main-contant-wrapper .navigation:hover .dropdown-content {
+.instruction .main-content .main-contant-wrapper .navigation .navigation-list:hover .dropdown-content {
   display: block;
+}
+.instruction .main-content .main-contant-wrapper .navigation .navigation-mobile {
+  display: none;
 }
 .instruction .main-content .content .images {
   position: relative;
@@ -3120,6 +3128,8 @@ a:visited {
 }
 .instruction .main-content .content .answer-list .list-item details > summary {
   list-style: none;
+  position: relative;
+  padding: 0 70px 0 0;
 }
 .instruction .main-content .content .answer-list .list-item details summary:before {
   content: "";
@@ -3127,7 +3137,7 @@ a:visited {
   height: 50px;
   border-radius: 50%;
   right: 0;
-  top: 22px;
+  top: calc(50% - 25px);
   position: absolute;
   display: block;
   background: #0033A1 url("../img/elements/plus.svg") no-repeat 50% 50%;
@@ -3138,7 +3148,7 @@ a:visited {
   height: 50px;
   border-radius: 50%;
   right: 0;
-  top: 22px;
+  top: calc(50% - 25px);
   position: absolute;
   display: block;
   background: #0033A1 url("../img/elements/minus.svg") no-repeat 50% 50%;
@@ -3177,6 +3187,366 @@ a:visited {
 }
 .instruction .main-content .content .slider-wrapper .control .documents-slider-button-next {
   transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+@media (max-width: 1410px) {
+  .instruction {
+    margin: 60px 0 0;
+  }
+  .instruction .title-line {
+    padding: 35px 0;
+  }
+  .instruction .title-line .main-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .instruction .breadcrumb .breadcrumb-wrapper {
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .instruction .breadcrumb .breadcrumb-wrapper .item {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 10px;
+  }
+  .instruction .main-content .main-contant-wrapper {
+    grid-template-columns: 100%;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+  .instruction .main-content .main-contant-wrapper .navigation {
+    margin: 0 0 30px;
+  }
+  .instruction .main-content .main-contant-wrapper .navigation .navigation-list {
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+  }
+  .instruction .main-content .main-contant-wrapper .navigation .navigation-mobile {
+    display: block;
+  }
+  .instruction .main-content .main-contant-wrapper .navigation .navigation-mobile .navigation-mobile-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #83B1DB;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .instruction .main-content .main-contant-wrapper .navigation .navigation-mobile .navigation-mobile-button .text {
+    width: 90%;
+    text-align: left;
+  }
+  .instruction .main-content .main-contant-wrapper .navigation:hover .navigation-list {
+    display: block;
+  }
+  .instruction .main-content .content .images {
+    height: 365px;
+    margin: 0 0 40px;
+  }
+  .instruction .main-content .content .images .instruction-slider-button-prev {
+    left: -15px;
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+  }
+  .instruction .main-content .content .images .instruction-slider-button-next {
+    right: -15px;
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+  }
+  .instruction .main-content .content .images .instruction-slider .slide .image-wrapper {
+    height: 365px;
+    padding: 25px 20px;
+  }
+  .instruction .main-content .content .images .instruction-slider .slide .image-wrapper .subtitle {
+    font-size: 18px;
+    line-height: 140%;
+    margin: 0 0 20px;
+  }
+  .instruction .main-content .content .images .instruction-slider .slide .image-wrapper .buttons-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    left: 0;
+    bottom: 25px;
+  }
+  .instruction .main-content .content .images .instruction-slider .slide .image-wrapper .buttons-wrapper a {
+    margin: 0;
+  }
+  .instruction .main-content .content .images .instruction-slider .slide .image-wrapper .inner-image {
+    position: static;
+    width: 100%;
+    height: 160px;
+    background-size: auto 100%;
+  }
+  .instruction .main-content .content .title {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 25px 45px;
+  }
+  .instruction .main-content .content .title::before {
+    left: -45px;
+    width: 30px;
+  }
+  .instruction .main-content .content .text-container {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .instruction .main-content .content .text-container > div {
+    margin: 0 0 20px;
+  }
+  .instruction .main-content .content .text-container .text-bold {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 5px;
+  }
+  .instruction .main-content .content .answer-list {
+    margin: 0 0 40px;
+  }
+  .instruction .main-content .content .answer-list .list-item {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .instruction .main-content .content .answer-list .list-item .list-item-content {
+    padding: 20px 0 0 10px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .instruction .main-content .content .answer-list .list-item details > summary {
+    padding: 0 50px 0 0;
+  }
+  .instruction .main-content .content .answer-list .list-item details summary:before {
+    width: 36px;
+    height: 36px;
+    top: calc(50% - 18px);
+    background-size: 50%;
+  }
+  .instruction .main-content .content .answer-list .list-item details[open] summary:before {
+    width: 36px;
+    height: 36px;
+    top: calc(50% - 18px);
+    background-size: 50%;
+  }
+  .instruction .main-content .content .slider-wrapper {
+    padding: 0;
+    margin: 0 0 40px;
+  }
+  .instruction .main-content .content .slider-wrapper .documents-slider .slide .document-image {
+    height: 300px;
+  }
+  .instruction .main-content .content .slider-wrapper .control {
+    display: none;
+  }
+}
+
+.production .title-line {
+  background: url("../img/backgrounds/title-line.jpg") no-repeat 50% 50%/cover;
+  padding: 56px 0;
+}
+.production .title-line .main-title {
+  font-family: "Tahoma";
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFFFFF;
+}
+.production .title-line .main-title .text-bold {
+  font-weight: bold;
+}
+.production .breadcrumb .breadcrumb-wrapper {
+  display: flex;
+  margin: 40px 0 40px;
+}
+.production .breadcrumb .breadcrumb-wrapper .item {
+  position: relative;
+  padding: 0 25px 0 0;
+  font-family: "Tahoma";
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #A4A8AC;
+}
+.production .breadcrumb .breadcrumb-wrapper .item:not(:last-child)::after {
+  position: absolute;
+  right: 6px;
+  content: "—";
+}
+.production .breadcrumb .breadcrumb-wrapper .item:not(:last-child):hover {
+  text-decoration: underline;
+}
+.production .main-content .main-contant-wrapper {
+  display: grid;
+  grid-template-columns: 330px calc(100% - 330px);
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+}
+.production .main-content .main-contant-wrapper .navigation .navigation-list {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 15px 30px;
+  background: #FFFFFF;
+  color: #595E65;
+  font-family: "Tahoma";
+  font-size: 16px;
+  line-height: 19px;
+  box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+}
+.production .main-content .main-contant-wrapper .navigation .navigation-list .link {
+  width: 100%;
+  padding: 15px 10px 15px 0;
+}
+.production .main-content .main-contant-wrapper .navigation .navigation-list .link:not(:last-child) {
+  border-bottom: 1px solid #D4D7DB;
+}
+.production .main-content .main-contant-wrapper .navigation .navigation-list a {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.production .main-content .main-contant-wrapper .navigation .navigation-list a.active, .production .main-content .main-contant-wrapper .navigation .navigation-list a:hover {
+  color: #0033A1;
+}
+.production .main-content .main-contant-wrapper .navigation .navigation-list a.active:after, .production .main-content .main-contant-wrapper .navigation .navigation-list a:hover:after {
+  content: "›";
+  position: absolute;
+  top: calc(50% - 8px);
+  right: -10px;
+  color: #BE9230;
+}
+.production .main-content .main-contant-wrapper .navigation .navigation-list:hover .dropdown-content {
+  display: block;
+}
+.production .main-content .main-contant-wrapper .navigation .navigation-mobile {
+  display: none;
+}
+.production .main-content .content .text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #595E65;
+  margin: 0 0 40px;
+}
+.production .main-content .content .text .text-bold {
+  font-size: 18px;
+  line-height: 28px;
+  color: #2D3341;
+}
+.production .main-content .content .title {
+  position: relative;
+  font-family: "Tahoma";
+  font-size: 36px;
+  line-height: 43px;
+  color: #2D3341;
+  margin: 0 0 40px 120px;
+}
+.production .main-content .content .title::before {
+  position: absolute;
+  left: -120px;
+  top: 50%;
+  content: "";
+  background: #BE9230;
+  width: 90px;
+  height: 2px;
+}
+.production .main-content .content .slider-wrapper {
+  margin: 0 0 60px;
+}
+.production .main-content .content .slider-wrapper .production-slider .slide .production-image {
+  height: 270px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+@media (max-width: 1410px) {
+  .production {
+    margin: 60px 0 0;
+  }
+  .production .title-line {
+    padding: 35px 0;
+  }
+  .production .title-line .main-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .production .breadcrumb .breadcrumb-wrapper {
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .production .breadcrumb .breadcrumb-wrapper .item {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 10px;
+  }
+  .production .main-content .main-contant-wrapper {
+    grid-template-columns: 100%;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+  .production .main-content .main-contant-wrapper .navigation {
+    margin: 0 0 30px;
+  }
+  .production .main-content .main-contant-wrapper .navigation .navigation-list {
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+  }
+  .production .main-content .main-contant-wrapper .navigation .navigation-mobile {
+    display: block;
+  }
+  .production .main-content .main-contant-wrapper .navigation .navigation-mobile .navigation-mobile-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #83B1DB;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .production .main-content .main-contant-wrapper .navigation .navigation-mobile .navigation-mobile-button .text {
+    width: 90%;
+    text-align: left;
+  }
+  .production .main-content .main-contant-wrapper .navigation:hover .navigation-list {
+    display: block;
+  }
+  .production .main-content .content .text {
+    margin: 0 0 25px;
+  }
+  .production .main-content .content .text .text-bold {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .production .main-content .content .title {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 25px 45px;
+  }
+  .production .main-content .content .title:not(:first-child) {
+    margin: 40px 0 25px 45px;
+  }
+  .production .main-content .content .title::before {
+    left: -45px;
+    width: 30px;
+  }
+  .production .main-content .content .slider-wrapper .production-slider .slide .production-image {
+    height: 250px;
+  }
 }
 
 .specialists .title-line {
@@ -3490,14 +3860,14 @@ a:visited {
   width: 90px;
   height: 2px;
 }
+.cosmetology .title-line {
+  background: url("../img/backgrounds/cosmetology1.png") no-repeat 50% 50%/cover;
+  padding: 110px 0 160px;
+}
 .cosmetology .title-line .title {
   font-size: 16px;
   line-height: 19px;
   margin: 0 0 0 120px;
-}
-.cosmetology .title-line {
-  background: url("../img/backgrounds/cosmetology1.png") no-repeat 50% 50%/cover;
-  padding: 110px 0 160px;
 }
 .cosmetology .title-line .main-title {
   font-family: Mojito Web;
@@ -3533,7 +3903,7 @@ a:visited {
   -moz-column-gap: 30px;
   column-gap: 30px;
 }
-.cosmetology .main-content .main-contant-wrapper .navigation {
+.cosmetology .main-content .main-contant-wrapper .navigation .navigation-list {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -3546,29 +3916,33 @@ a:visited {
   box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
 }
-.cosmetology .main-content .main-contant-wrapper .navigation .link {
+.cosmetology .main-content .main-contant-wrapper .navigation .navigation-list .link {
   width: 100%;
   padding: 15px 10px 15px 0;
 }
-.cosmetology .main-content .main-contant-wrapper .navigation .link:not(:last-child) {
+.cosmetology .main-content .main-contant-wrapper .navigation .navigation-list .link:not(:last-child) {
   border-bottom: 1px solid #D4D7DB;
 }
-.cosmetology .main-content .main-contant-wrapper .navigation a {
+.cosmetology .main-content .main-contant-wrapper .navigation .navigation-list a {
   position: relative;
   display: block;
   width: 100%;
 }
-.cosmetology .main-content .main-contant-wrapper .navigation a.active, .cosmetology .main-content .main-contant-wrapper .navigation a:hover {
+.cosmetology .main-content .main-contant-wrapper .navigation .navigation-list a.active, .cosmetology .main-content .main-contant-wrapper .navigation .navigation-list a:hover {
   color: #0033A1;
 }
-.cosmetology .main-content .main-contant-wrapper .navigation a.active:after, .cosmetology .main-content .main-contant-wrapper .navigation a:hover:after {
+.cosmetology .main-content .main-contant-wrapper .navigation .navigation-list a.active:after, .cosmetology .main-content .main-contant-wrapper .navigation .navigation-list a:hover:after {
   content: "›";
   position: absolute;
+  top: calc(50% - 8px);
   right: -10px;
   color: #BE9230;
 }
-.cosmetology .main-content .main-contant-wrapper .navigation:hover .dropdown-content {
+.cosmetology .main-content .main-contant-wrapper .navigation .navigation-list:hover .dropdown-content {
   display: block;
+}
+.cosmetology .main-content .main-contant-wrapper .navigation .navigation-mobile {
+  display: none;
 }
 .cosmetology .main-content .content .title {
   margin: 0 0 50px 120px;
@@ -3609,6 +3983,24 @@ a:visited {
   list-style: url("../img/elements/dot.svg");
   padding: 0 0 0 10px;
   margin: 0 0 10px 40px;
+}
+.cosmetology .main-content .content .link-list-wrapper {
+  margin: 0 0 40px;
+}
+.cosmetology .main-content .content .link-list-wrapper .link-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cosmetology .main-content .content .link-list-wrapper .link-list > li {
+  width: 50%;
+  margin: 0 0 10px;
+}
+.cosmetology .main-content .content .link-list-wrapper .link-list > li > a {
+  font-size: 16px;
+  line-height: 26px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #0033A1;
 }
 .cosmetology .main-content .content .video-wrapper {
   margin: 20px 0 80px;
@@ -3738,6 +4130,634 @@ a:visited {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
+}
+@media (max-width: 1410px) {
+  .cosmetology {
+    margin: 60px 0 0;
+  }
+  .cosmetology .title-line {
+    padding: 50px 0 55px;
+  }
+  .cosmetology .title-line .title {
+    max-width: 190px;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 5px;
+  }
+  .cosmetology .title-line .title::before {
+    left: 0;
+    top: -15px;
+    width: 30px;
+  }
+  .cosmetology .title-line .main-title {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+  }
+  .cosmetology .breadcrumb .breadcrumb-wrapper {
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .cosmetology .breadcrumb .breadcrumb-wrapper .item {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 10px;
+  }
+  .cosmetology .main-content .main-contant-wrapper {
+    grid-template-columns: 100%;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+  .cosmetology .main-content .main-contant-wrapper .navigation {
+    margin: 0 0 30px;
+  }
+  .cosmetology .main-content .main-contant-wrapper .navigation .navigation-list {
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+  }
+  .cosmetology .main-content .main-contant-wrapper .navigation .navigation-mobile {
+    display: block;
+  }
+  .cosmetology .main-content .main-contant-wrapper .navigation .navigation-mobile .navigation-mobile-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #FBCBBB;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .cosmetology .main-content .main-contant-wrapper .navigation .navigation-mobile .navigation-mobile-button .text {
+    width: 90%;
+    text-align: left;
+  }
+  .cosmetology .main-content .main-contant-wrapper .navigation:hover .navigation-list {
+    display: block;
+  }
+  .cosmetology .main-content .content .title {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 25px 45px;
+  }
+  .cosmetology .main-content .content .title::before {
+    left: -45px;
+    width: 30px;
+  }
+  .cosmetology .main-content .content .text {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 25px;
+  }
+  .cosmetology .main-content .content .definition {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 25px;
+  }
+  .cosmetology .main-content .content .image {
+    display: block;
+    margin: 0 0 25px;
+  }
+  .cosmetology .main-content .content .list-wrapper {
+    margin: 0 0 25px;
+  }
+  .cosmetology .main-content .content .list-wrapper .name {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 20px;
+  }
+  .cosmetology .main-content .content .list-wrapper .list > li {
+    line-height: 24px;
+    margin: 0 0 5px 25px;
+  }
+  .cosmetology .main-content .content .link-list-wrapper {
+    margin: 0 0 25px;
+  }
+  .cosmetology .main-content .content .link-list-wrapper .link-list > li {
+    width: 100%;
+    list-style: url("../img/elements/dot-yellow.svg");
+    padding: 0 0 0 10px;
+    margin: 0 0 10px 15px;
+  }
+  .cosmetology .main-content .content .video-wrapper {
+    margin: 20px 0 40px;
+  }
+  .cosmetology .main-content .content .video-wrapper .video {
+    height: 200px;
+  }
+  .cosmetology .question .question-form {
+    padding: 30px 20px 40px;
+  }
+  .cosmetology .question .question-form .title {
+    margin: 0 0 30px 45px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .cosmetology .question .question-form .title::before {
+    left: -45px;
+    width: 30px;
+  }
+  .cosmetology .question .question-form .label-wrapper {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .cosmetology .question .question-form .input-container {
+    display: block;
+  }
+  .cosmetology .question .question-form .input-container .item {
+    margin: 0 0 15px;
+  }
+  .cosmetology .question .question-form .input-container .input-wrapper input {
+    width: 100%;
+  }
+  .cosmetology .question .question-form .checkbox-wrapper {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .cosmetology .question .question-form .recaptcha-wrapper {
+    margin: 20px 0 30px;
+  }
+  .cosmetology .question .question-form .submit-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .cosmetology .question .question-form .submit-wrapper .submit-button {
+    font-family: "Open Sans";
+    background: #0033A1;
+    border-radius: 100px;
+    padding: 14px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 14px 56px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.neurology .title {
+  position: relative;
+  font-family: "Tahoma";
+  font-size: 48px;
+  line-height: 58px;
+  color: #2D3341;
+}
+.neurology .title::before {
+  position: absolute;
+  left: -120px;
+  top: 50%;
+  content: "";
+  background: #BE9230;
+  width: 90px;
+  height: 2px;
+}
+.neurology .title-line {
+  background: url("../img/backgrounds/neurology1.png") no-repeat 50% 50%/cover;
+  padding: 110px 0 160px;
+}
+.neurology .title-line .title {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 0 0 120px;
+}
+.neurology .title-line .main-title {
+  font-family: Mojito Web;
+  font-size: 130px;
+  line-height: 130px;
+  color: #0033A1;
+  margin: 0 0 0 120px;
+}
+.neurology .breadcrumb .breadcrumb-wrapper {
+  display: flex;
+  margin: 40px 0 40px;
+}
+.neurology .breadcrumb .breadcrumb-wrapper .item {
+  position: relative;
+  padding: 0 25px 0 0;
+  font-family: "Tahoma";
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #A4A8AC;
+}
+.neurology .breadcrumb .breadcrumb-wrapper .item:not(:last-child)::after {
+  position: absolute;
+  right: 6px;
+  content: "—";
+}
+.neurology .breadcrumb .breadcrumb-wrapper .item:not(:last-child):hover {
+  text-decoration: underline;
+}
+.neurology .main-content .main-contant-wrapper {
+  display: grid;
+  grid-template-columns: 330px calc(100% - 330px);
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+}
+.neurology .main-content .main-contant-wrapper .navigation .navigation-list {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 15px 30px;
+  background: #FFFFFF;
+  color: #595E65;
+  font-family: "Tahoma";
+  font-size: 16px;
+  line-height: 19px;
+  box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+}
+.neurology .main-content .main-contant-wrapper .navigation .navigation-list .link {
+  width: 100%;
+  padding: 15px 10px 15px 0;
+}
+.neurology .main-content .main-contant-wrapper .navigation .navigation-list .link:not(:last-child) {
+  border-bottom: 1px solid #D4D7DB;
+}
+.neurology .main-content .main-contant-wrapper .navigation .navigation-list a {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.neurology .main-content .main-contant-wrapper .navigation .navigation-list a.active, .neurology .main-content .main-contant-wrapper .navigation .navigation-list a:hover {
+  color: #0033A1;
+}
+.neurology .main-content .main-contant-wrapper .navigation .navigation-list a.active:after, .neurology .main-content .main-contant-wrapper .navigation .navigation-list a:hover:after {
+  content: "›";
+  position: absolute;
+  top: calc(50% - 8px);
+  right: -10px;
+  color: #BE9230;
+}
+.neurology .main-content .main-contant-wrapper .navigation .navigation-list:hover .dropdown-content {
+  display: block;
+}
+.neurology .main-content .main-contant-wrapper .navigation .navigation-mobile {
+  display: none;
+}
+.neurology .main-content .content .title {
+  margin: 0 0 50px 120px;
+}
+.neurology .main-content .content .text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #595E65;
+  margin: 0 0 40px;
+}
+.neurology .main-content .content .definition {
+  font-size: 20px;
+  line-height: 32px;
+  color: #2D3341;
+  padding: 30px 0;
+  border-top: 1px solid #BE9230;
+  border-bottom: 1px solid #BE9230;
+  margin: 0 0 40px;
+}
+.neurology .main-content .content .image {
+  display: block;
+  margin: 0 0 40px;
+}
+.neurology .main-content .content .list-wrapper {
+  margin: 0 0 40px;
+}
+.neurology .main-content .content .list-wrapper .name {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #2D3341;
+  margin: 0 0 30px;
+}
+.neurology .main-content .content .list-wrapper .list > li {
+  font-size: 16px;
+  line-height: 26px;
+  color: #595E65;
+  list-style: url("../img/elements/dot-yellow.svg");
+  padding: 0 0 0 10px;
+  margin: 0 0 10px 40px;
+}
+.neurology .main-content .content .link-list-wrapper {
+  margin: 0 0 40px;
+}
+.neurology .main-content .content .link-list-wrapper .link-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.neurology .main-content .content .link-list-wrapper .link-list > li {
+  width: 50%;
+  margin: 0 0 10px;
+}
+.neurology .main-content .content .link-list-wrapper .link-list > li > a {
+  font-size: 16px;
+  line-height: 26px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #0033A1;
+}
+.neurology .main-content .content .video-wrapper {
+  margin: 20px 0 80px;
+}
+.neurology .main-content .content .video-wrapper .video {
+  width: 100%;
+  height: 540px;
+  border-radius: 20px;
+}
+.neurology .question .question-form {
+  background: url("../img/backgrounds/question-form.jpg") no-repeat 50% 50%/cover;
+  width: 100%;
+  border-radius: 20px;
+  padding: 60px 120px 60px 600px;
+  margin: 0 0 60px;
+}
+.neurology .question .question-form .label-wrapper {
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #595E65;
+  margin: 0 0 5px;
+}
+.neurology .question .question-form .star {
+  color: #9d2862;
+}
+.neurology .question .question-form .input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 15px;
+}
+.neurology .question .question-form .input-container .input-wrapper input {
+  width: 210px;
+  padding: 14px 20px;
+  box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  border: none;
+}
+.neurology .question .question-form .select-wrapper .theme {
+  width: 100%;
+  padding: 14px 20px;
+  background: #ffffff url("../img/elements/arrow-down-blue.svg") no-repeat right 15px top 50%;
+  box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.neurology .question .question-form .select-wrapper .theme option {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+.neurology .question .question-form .textarea-wrapper .massage {
+  width: 100%;
+  height: 176px;
+  padding: 14px 20px;
+  box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  border: none;
+  margin: 0 0 20px;
+  resize: none;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Open Sans", sans-serif;
+}
+.neurology .question .question-form .checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #2D3341;
+}
+.neurology .question .question-form .checkbox-wrapper .policy {
+  color: #0033A1;
+  text-decoration: underline;
+}
+.neurology .question .question-form .checkbox-wrapper input {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #ffffff;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+.neurology .question .question-form .checkbox-wrapper input:checked {
+  background: #0033A1;
+}
+.neurology .question .question-form .checkbox-wrapper input:checked::after {
+  content: "✔";
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+.neurology .question .question-form .checkbox-wrapper span {
+  width: calc(100% - 30px);
+}
+.neurology .question .question-form .recaptcha-wrapper {
+  margin: 20px 0 30px;
+}
+.neurology .question .question-form .submit-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.neurology .question .question-form .submit-wrapper .submit-button {
+  font-family: "Open Sans";
+  background: #0033A1;
+  border-radius: 100px;
+  padding: 14px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding: 14px 56px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media (max-width: 1410px) {
+  .neurology {
+    margin: 60px 0 0;
+  }
+  .neurology .title-line {
+    padding: 50px 0 55px;
+  }
+  .neurology .title-line .title {
+    max-width: 190px;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 5px;
+  }
+  .neurology .title-line .title::before {
+    left: 0;
+    top: -15px;
+    width: 30px;
+  }
+  .neurology .title-line .main-title {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+  }
+  .neurology .breadcrumb .breadcrumb-wrapper {
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .neurology .breadcrumb .breadcrumb-wrapper .item {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 10px;
+  }
+  .neurology .main-content .main-contant-wrapper {
+    grid-template-columns: 100%;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+  .neurology .main-content .main-contant-wrapper .navigation {
+    margin: 0 0 30px;
+  }
+  .neurology .main-content .main-contant-wrapper .navigation .navigation-list {
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+  }
+  .neurology .main-content .main-contant-wrapper .navigation .navigation-mobile {
+    display: block;
+  }
+  .neurology .main-content .main-contant-wrapper .navigation .navigation-mobile .navigation-mobile-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #FBCBBB;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .neurology .main-content .main-contant-wrapper .navigation .navigation-mobile .navigation-mobile-button .text {
+    width: 90%;
+    text-align: left;
+  }
+  .neurology .main-content .main-contant-wrapper .navigation:hover .navigation-list {
+    display: block;
+  }
+  .neurology .main-content .content .title {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 25px 45px;
+  }
+  .neurology .main-content .content .title::before {
+    left: -45px;
+    width: 30px;
+  }
+  .neurology .main-content .content .text {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 25px;
+  }
+  .neurology .main-content .content .definition {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 25px;
+  }
+  .neurology .main-content .content .image {
+    display: block;
+    margin: 0 0 25px;
+  }
+  .neurology .main-content .content .list-wrapper {
+    margin: 0 0 25px;
+  }
+  .neurology .main-content .content .list-wrapper .name {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 20px;
+  }
+  .neurology .main-content .content .list-wrapper .list > li {
+    line-height: 24px;
+    margin: 0 0 5px 25px;
+  }
+  .neurology .main-content .content .link-list-wrapper {
+    margin: 0 0 25px;
+  }
+  .neurology .main-content .content .link-list-wrapper .link-list > li {
+    width: 100%;
+    list-style: url("../img/elements/dot-yellow.svg");
+    padding: 0 0 0 10px;
+    margin: 0 0 10px 15px;
+  }
+  .neurology .main-content .content .video-wrapper {
+    margin: 20px 0 40px;
+  }
+  .neurology .main-content .content .video-wrapper .video {
+    height: 200px;
+  }
+  .neurology .question .question-form {
+    padding: 30px 20px 40px;
+  }
+  .neurology .question .question-form .title {
+    margin: 0 0 30px 45px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .neurology .question .question-form .title::before {
+    left: -45px;
+    width: 30px;
+  }
+  .neurology .question .question-form .label-wrapper {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .neurology .question .question-form .input-container {
+    display: block;
+  }
+  .neurology .question .question-form .input-container .item {
+    margin: 0 0 15px;
+  }
+  .neurology .question .question-form .input-container .input-wrapper input {
+    width: 100%;
+  }
+  .neurology .question .question-form .checkbox-wrapper {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .neurology .question .question-form .recaptcha-wrapper {
+    margin: 20px 0 30px;
+  }
+  .neurology .question .question-form .submit-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .neurology .question .question-form .submit-wrapper .submit-button {
+    font-family: "Open Sans";
+    background: #0033A1;
+    border-radius: 100px;
+    padding: 14px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 14px 56px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .calculator .title-line-yellow,
@@ -4959,11 +5979,13 @@ a:visited {
     line-height: 29px;
   }
   .calculator .breadcrumb .breadcrumb-wrapper {
+    flex-wrap: wrap;
     margin: 20px 0;
   }
   .calculator .breadcrumb .breadcrumb-wrapper .item {
     font-size: 12px;
     line-height: 14px;
+    margin: 0 0 10px;
   }
   .calculator .main-content .small-container {
     width: 100%;
