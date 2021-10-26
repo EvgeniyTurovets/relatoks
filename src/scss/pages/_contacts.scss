@@ -118,6 +118,25 @@
       padding: 60px 120px 60px 600px;
       margin: 0 0 60px;
 
+      .title {
+        position: relative;
+        font-family: 'Tahoma';
+        font-size: 48px;
+        line-height: 58px;
+        color: #2D3341;
+        margin: 0 0 30px;
+    
+        &::before {
+          position: absolute;
+          left: -120px;
+          top: calc(50% - 1px);
+          content: '';
+          background: #BE9230;
+          width: 90px;
+          height: 2px;
+        }
+      }
+
       .label-wrapper {
         font-size: 14px;
         line-height: 19px;
