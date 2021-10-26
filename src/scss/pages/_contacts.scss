@@ -1,12 +1,13 @@
-.answer {
+.contacts {
   .title-line {
-    @include bg-cover('../img/backgrounds/title-line-pink.jpg');
+    @include bg-cover('../img/backgrounds/title-line.jpg');
     padding: 56px 0;
     
     .main-title {
       font-family: 'Tahoma';
       font-size: 40px;
       line-height: 48px;
+      color: #FFFFFF;
 
       .text-bold {
         font-weight: bold;
@@ -17,7 +18,7 @@
   .breadcrumb {
     .breadcrumb-wrapper {
       @include flex;
-      margin: 40px 0 40px;
+      margin: 40px 0 50px;
   
       .item {
         position: relative;
@@ -41,80 +42,69 @@
     }
   }
 
-  .main-content {
-    padding: 0 0 80px;
+  .main-content {    
+    .map {
+      margin: 0 0 40px;
+      border-radius: 20px;
+      box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
+    }
 
-    .answer-list {
-      padding: 0 120px;
+    .info {
+      @include flex;
+      align-items: flex-start;
+      padding: 40px 0;
+      margin: 0 0 40px;
+      border-top: 1px solid #BE9230;
+      border-bottom: 1px solid #BE9230;
 
-      .list-item {
-        position: relative;
-        padding: 30px 0;
-        width: 100%;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 34px;
-        color: #2D3341;
-        border-bottom: 1px solid #D4D7DB;
+      .manufacturer {
+        width: 30%;
+        margin: 0 20% 0 0;
 
-        .content {
-          position: relative;
-          padding: 30px 120px 0 40px;
-          font-style: italic;
-          font-weight: 300;
+        .title {
+          font-size: 16px;
+          line-height: 22px;
+          margin: 0 0 10px;
+        }
+
+        .text {
           font-size: 18px;
-          line-height: 28px;
-          color: #2D3341;
+          line-height: 26px;
+          color: #595E65;
+        }
+      }
 
-          &::before {
-            content: '';
-            z-index: -1;
-            width: 55px;
-            height: 55px;
-            left: 0;
-            top: 20px;
-            position: absolute;
-            display: block;
-            background: url('../img/elements/quote.svg') no-repeat 50% 50%;
+      .tags-container {
+        .item {
+          @include flex-v-center;
+
+          &:not(:last-child) {
+            margin: 0 0 25px;
           }
-        }
 
-        details {
-          cursor: pointer;
-        }
-        
-        details summary::-webkit-details-marker {
-          display: none;
-        }
-        
-        details > summary {
-          list-style: none;
-          position: relative;
-          padding: 0 70px 0 0;
-        }
-        
-        details summary:before {
-          content: '';
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          right: 0;
-          top: calc(50% - 25px);
-          position: absolute;
-          display: block;
-          background: #0033A1 url('../img/elements/plus.svg') no-repeat 50% 50%;
-        }
-        
-        details[open] summary:before {
-          content: '';
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          right: 0;
-          top: calc(50% - 25px);
-          position: absolute;
-          display: block;
-          background: #0033A1 url('../img/elements/minus.svg') no-repeat 50% 50%;
+          .icon {
+            display: block;
+            margin: 0 15px 0 0;
+          }
+
+          .text {
+            font-size: 18px;
+            line-height: 26px;
+            color: #595E65;
+          }
+
+          .text-bold {
+            font-size: 16px;
+            line-height: 22px;
+            color: #2D3341;
+          }
+
+          .link {
+            text-decoration-line: underline;
+            color: #0033A1;
+            font-size: 18px;
+            line-height: 28px;
+          }
         }
       }
     }
@@ -127,29 +117,6 @@
       border-radius: 20px;
       padding: 60px 120px 60px 600px;
       margin: 0 0 60px;
-
-      .title {
-        position: relative;
-        font-family: 'Tahoma';
-        font-size: 48px;
-        line-height: 58px;
-        color: #2D3341;
-        margin: 0 0 30px;
-
-        .text-bold {
-          font-weight: bold;
-        }
-
-        &::before {
-          position: absolute;
-          left: -120px;
-          top: 29px;
-          content: '';
-          background: #BE9230;
-          width: 90px;
-          height: 2px;
-        }
-      }
 
       .label-wrapper {
         font-size: 14px;
@@ -254,7 +221,7 @@
             top: 0;
           }
         }
-
+        
         span {
           width: calc(100% - 30px);
         }
@@ -304,36 +271,60 @@
     }
 
     .main-content {
-      .answer-list {
+      .container {
         padding: 0;
+      }
 
-        .list-item {
-          padding: 20px 0;
-          font-size: 16px;
-          line-height: 24px;
-
-          .content {
-            padding: 20px 0 0 10px;
+      .map {
+        height: 220px;
+        border-radius: 0;
+        margin: 0 0 25px;
+      }
+  
+      .info {
+        flex-direction: column;
+        padding: 25px 0;
+        margin: 0 20px 25px;
+  
+        .manufacturer {
+          width: 100%;
+          margin: 0 0 25px;
+  
+          .title {
+            font-size: 14px;
+            line-height: 19px;
+          }
+  
+          .text {
             font-size: 16px;
             line-height: 24px;
           }
-          
-          details > summary {
-            padding: 0 50px 0 0;
-          }
-
-          details summary:before {
-            width: 36px;
-            height: 36px;
-            top: calc(50% - 18px);
-            background-size: 50%;
-          }
-
-          details[open] summary:before {
-            width: 36px;
-            height: 36px;
-            top: calc(50% - 18px);
-            background-size: 50%;
+        }
+  
+        .tags-container {
+          .item {
+            align-items: flex-start;
+  
+            &:not(:last-child) {
+              margin: 0 0 20px;
+            }
+  
+            .text {
+              font-size: 16px;
+              line-height: 24px;
+            }
+  
+            .text-bold {
+              display: block;
+              margin: 0 0 5px;
+              font-size: 14px;
+              line-height: 19px;
+            }
+  
+            .link {
+              font-size: 16px;
+              line-height: 24px;
+            }
           }
         }
       }
