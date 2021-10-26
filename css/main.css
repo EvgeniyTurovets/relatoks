@@ -4137,6 +4137,7 @@ a:visited {
   }
   .cosmetology .title-line {
     padding: 50px 0 55px;
+    background-position: 45% 50%;
   }
   .cosmetology .title-line .title {
     max-width: 190px;
@@ -4595,6 +4596,8 @@ a:visited {
   }
   .neurology .title-line {
     padding: 50px 0 55px;
+    background-position: 40% 50%;
+    background-size: auto 150%;
   }
   .neurology .title-line .title {
     max-width: 190px;
