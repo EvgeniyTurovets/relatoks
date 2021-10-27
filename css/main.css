@@ -5066,24 +5066,99 @@ a:visited {
   }
 }
 .calculator .main-content .small-container .content .cosmetology-info .injector {
-  position: relative;
   width: 850px;
   height: 150px;
   border: 1px dashed #D4D7DB;
   border-radius: 5px;
   margin: 0 0 40px;
 }
-.calculator .main-content .small-container .content .cosmetology-info .injector .left-part {
+.calculator .main-content .small-container .content .cosmetology-info .injector * {
+  transition: all 2s;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg50,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg40,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml05seg50,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml03seg30 {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg50 .left-part,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg40 .left-part,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml05seg50 .left-part,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml03seg30 .left-part {
   height: 44px;
   position: absolute;
-  left: 100px;
   top: calc(50% - 22px);
 }
-.calculator .main-content .small-container .content .cosmetology-info .injector .right-part {
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg50 .right-part,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg40 .right-part,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml05seg50 .right-part,
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml03seg30 .right-part {
   height: 76px;
   position: absolute;
-  right: 100px;
   top: calc(50% - 38px);
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg50 {
+  display: block;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg50 .left-part {
+  left: 199px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg50 .right-part {
+  right: 199px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg50.full .left-part {
+  left: 76px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg50.full .right-part {
+  right: 76px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg40 {
+  display: none;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg40 .left-part {
+  left: 207px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg40 .right-part {
+  right: 207px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg40.full .left-part {
+  left: 99px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml1seg40.full .right-part {
+  right: 99px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml05seg50 {
+  display: none;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml05seg50 .left-part {
+  left: 213px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml05seg50 .right-part {
+  right: 213px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml05seg50.full .left-part {
+  left: 106px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml05seg50.full .right-part {
+  right: 106px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml03seg30 {
+  display: none;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml03seg30 .left-part {
+  left: 221px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml03seg30 .right-part {
+  right: 221px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml03seg30.full .left-part {
+  left: 132px;
+}
+.calculator .main-content .small-container .content .cosmetology-info .injector .ml03seg30.full .right-part {
+  right: 132px;
 }
 .calculator .main-content .small-container .content .cosmetology-info .dose-select {
   position: relative;
@@ -6049,8 +6124,14 @@ a:visited {
     list-style: disc;
     margin: 0 0 15px 20px;
   }
+  .calculator .main-content .small-container .content .cosmetology-info .injector-select {
+    margin: 0 0 25px;
+  }
+  .calculator .main-content .small-container .content .cosmetology-info .injector {
+    display: none;
+  }
   .calculator .main-content .small-container .content .cosmetology-info .dose-select {
-    margin: 0 0 30px;
+    margin: 0 0 25px;
   }
   .calculator .main-content .small-container .content .cosmetology-info .calculation .calculation-button {
     padding: 14px;
