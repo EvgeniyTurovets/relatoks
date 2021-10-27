@@ -1,0 +1,223 @@
+.locations {
+  .title-line {
+    @include bg-cover('../img/backgrounds/title-line-yellow.jpg');
+    padding: 56px 0;
+    
+    .main-title {
+      font-family: 'Tahoma';
+      font-size: 40px;
+      line-height: 48px;
+
+      .text-bold {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .breadcrumb {
+    .breadcrumb-wrapper {
+      @include flex;
+      margin: 40px 0 50px;
+  
+      .item {
+        position: relative;
+        padding: 0 25px 0 0;
+        font-family: 'Tahoma';
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #A4A8AC;
+        
+        &:not(:last-child)::after {
+          position: absolute;
+          right: 6px;
+          content: '—';
+        }
+  
+        &:not(:last-child):hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    padding: 0 0 60px;
+
+    .massage {
+      width: 100%;
+      font-size: 16px;
+      line-height: 28px;
+      margin: 0 0 30px;
+      padding: 20px 40px;
+      border: 5px solid #F3F3F3;
+      border-radius: 20px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: calc(100% - 450px) 450px;
+      width: 100%;
+      height: 520px;
+      margin: 0 0 40px;
+      box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.07);
+      border-radius: 20px;
+
+      .map {
+        iframe {
+          border-radius: 20px 0 0 20px;
+        }
+      }
+
+      .info {
+        padding: 50px;
+
+        .map-logo {
+          display: block;
+          margin: 0 0 50px;
+        }
+
+        .name {
+          margin: 0 0 30px;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 33px;
+        }
+
+        .tags-container {
+          .item {
+            @include flex;
+            align-items: flex-start;
+            margin: 0 0 25px;
+
+            .icon {
+              display: block;
+              margin: 3px 15px 0 0;
+            }
+
+            .text {
+              font-size: 16px;
+              line-height: 26px;
+            }
+
+            .link {
+              text-decoration-line: underline;
+              color: #0033A1;
+            }
+          }
+        }
+      }
+    }
+
+    .sub-text {
+      padding: 20px 40px;
+      font-size: 16px;
+      line-height: 26px;
+      border: 5px solid #F3F3F3;
+      border-radius: 20px;
+      margin: 0 0 10px;
+    }
+
+    .attention {
+      @include flex-v-center;
+      padding: 15px 40px;
+      background: #FBCBBB;
+      border-radius: 20px;
+
+      .icon {
+        margin: 0 15px 0 0;
+      }
+
+      .text {
+        color: #9F2863;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  @include small-screen {
+    margin: 60px 0 0;
+
+    .title-line {
+      padding: 35px 0;
+      
+      .main-title {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    .breadcrumb {
+      .breadcrumb-wrapper {
+        margin: 20px 0 40px;
+  
+        .item {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    .main-content {
+      padding: 0 0 40px;
+
+      .container {
+        padding: 0;
+      }
+  
+      .massage {
+        line-height: 24px;
+        padding: 20px;
+        width: calc(100% - 40px);
+        margin: 0 20px 30px;
+      }
+  
+      .content {
+        width: 100%;
+        margin: 0 0 20px;
+        grid-template-columns: 1fr;
+        height: auto;
+        box-shadow: none;
+        border-radius: 0;
+  
+        .map {
+          iframe{
+            border-radius: 0;
+          }
+        }
+  
+        .info {
+          padding: 40px 20px 0;
+  
+          .map-logo {
+            margin: 0 0 30px;
+          }
+  
+          .name {
+            font-size: 20px;
+            line-height: 27px;
+          }
+        }
+      }
+  
+      .sub-text {
+        padding: 20px;
+        line-height: 24px;
+        width: calc(100% - 40px);
+        margin: 0 20px 10px;
+      }
+  
+      .attention {
+        padding: 20px;
+        width: calc(100% - 40px);
+        margin: 0 20px;
+  
+        .text {
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="site-container">
+    @include('partials/header.html')
+    <div class="locations">
+
+      <section class="title-line">
+        <div class="container">
+          <h1 class="main-title"><span class="text-bold">Где</span> купить?</h1>
+        </div>
+      </section>
+
+      <section class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb-wrapper">
+            <div class="item"><a href="">Главная</a></div>
+            <div class="item">Где купить?</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-content">
+        <div class="container">
+          <div class="location-wrapper">
+            <div class="massage">
+              Приобрести препарат Релатокс для использования в эстетической 
+              косметологии Вы можете у наших официальных дистрибьюторов
+            </div>
+            <div class="content">
+              <div class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7fdb35bf1056cb1b05155ef1dfd494606c004599ac29bedc31784a8047d7f085&amp;source=constructor" width="100%" height="520" frameborder="0"></iframe>
+              </div>
+              <div class="info">
+                <img src="./img/partials/map-logo.svg" class="map-logo">
+                <div class="name">ООО Фармсервис</div>
+                <div class="tags-container">
+                  <div class="item">
+                    <img src="./img/icons/place.svg" class="icon">
+                    <div class="text">
+                      350018, Россия, Краснодарский край, г. Краснодар, ул. Сормовская, дом 7 Литер Г, офис 139
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="./img/icons/phone.svg" class="icon">
+                    <div class="text">
+                      +7 (989) 290-00-00
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="./img/icons/mail.svg" class="icon">
+                    <div class="text">
+                      <a href="" class="link">info@phsv.ru</a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="./img/icons/web.svg" class="icon">
+                    <div class="text">
+                      <a href="" class="link">phsv.ru</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sub-text">
+              Для лечения неврологических заболеваний препаратом Релатокс 
+              Вы можете обращаться в лечебно-профилактические учреждения. 
+              Препарат представляется пациенту <span class="text-bold">бесплатно по медицинским показаниям</span> 
+              лечащего врача по федеральным и региональным квотам.
+            </div>
+            <div class="attention">
+              <div class="icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 0C8.97133 0 0 8.97219 0 20C0 31.0278 8.97133 40 20 40C31.0287 40 40 31.0278 40 20C40 8.97219 31.0287 0 20 0ZM20 38.3334C9.89094 38.3334 1.66664 30.1091 1.66664 20C1.66664 9.89094 9.89094 1.66664 20 1.66664C30.1091 1.66664 38.3334 9.89094 38.3334 20C38.3334 30.1091 30.1091 38.3334 20 38.3334Z" fill="#9F2863"/>
+                  <path d="M19.9999 6.66797C19.5392 6.66797 19.1665 7.0407 19.1665 7.50133V27.5013C19.1665 27.962 19.5392 28.3347 19.9999 28.3347C20.4605 28.3347 20.8332 27.962 20.8332 27.5013V7.50133C20.8332 7.0407 20.4605 6.66797 19.9999 6.66797Z" fill="#9F2863"/>
+                  <path d="M19.9999 33.3347C20.4601 33.3347 20.8332 32.9616 20.8332 32.5013C20.8332 32.0411 20.4601 31.668 19.9999 31.668C19.5396 31.668 19.1665 32.0411 19.1665 32.5013C19.1665 32.9616 19.5396 33.3347 19.9999 33.3347Z" fill="#9F2863"/>
+                </svg>
+              </div>
+              <div class="text">Внимание! Продажа физ.лицам не осуществляется.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
