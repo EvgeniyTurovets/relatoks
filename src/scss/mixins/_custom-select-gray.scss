@@ -1,0 +1,121 @@
+@mixin custom-select-gray {
+  .select2-container--relatox_gray {
+    min-width: 200px;
+    font-family: 'Open Sans';
+
+    &.select2-container--open .select2-dropdown--below,
+    &.select2-container--open .select2-dropdown--above {
+      background: #FFFFFF;
+      border: none;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+  
+    &.select2-container--open .select2-dropdown--above {
+      border-radius: 5px 5px 0 0;
+  
+      .select2-results__option {
+        &:first-of-type {
+          border-radius: 5px 5px 0 0;
+        }
+      }
+    }
+  
+    &.select2-container--open .select2-dropdown--below {
+      border-radius: 0 0 5px 5px;
+  
+      .select2-results__option {
+        &:last-of-type {
+          border-radius: 0 0 5px 5px;
+        }
+      }
+    }
+
+    &.select2-container--open.select2-container--above {
+      .select2-selection--single {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  
+    &.select2-container--open.select2-container--below {
+      .select2-selection--single {
+        border-radius: 5px 5px 0 0;
+      }
+    }
+
+    .select2-results__option {
+      font-size: 16px;
+      line-height: 22px;
+      color: #2D3341;
+      padding: 15px 20px;
+    }
+
+    .select2-results__option--highlighted[aria-selected] {
+      background: #5f9cff !important;
+      color: #FFFFFF;
+    }
+
+    .select2-results__option--selected {
+      background-color: #d6d6d6;
+    }
+
+    .select2-selection--single {
+      height: auto;
+      background-color: #F3F3F3;
+      border: none;
+      border-radius: 5px;
+
+      .select2-selection__placeholder {
+        font-style: italic;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        color: #595E65;
+      }
+      
+      .select2-selection__rendered {
+        padding: 15px 40px 15px 20px;
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #2D3341;
+      }
+
+      .select2-selection__arrow {
+        position: absolute;
+        height: 52px;
+        width: 30px;
+        top: 0;
+        right: 1px;
+
+        b {
+          &::after {
+            position: absolute;
+            top: calc(50% - 7px);
+            left: 8px;
+            display: block;
+            content: '›';
+            transform: scale(2) rotate(90deg);
+          }
+        }
+      }
+    }
+
+    &.select2-container--open {
+      .select2-selection--single {
+        .select2-selection__arrow {
+          b {
+            &::after {
+              position: absolute;
+              top: calc(50% - 7px);
+              left: 0;
+              display: block;
+              content: '›';
+              transform: scale(2) rotate(-90deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -234,8 +234,7 @@
             }
           }
 
-          .injector-select {
-            @include custom-select;
+          .injector-select-wrapper {
             margin: 0 0 10px;
           }
 
@@ -361,19 +360,8 @@
             }
           }
 
-          .dose-select {
-            @include custom-select;
+          .dose-select-wrapper {
             margin: 0 0 40px;
-
-            .input-sub-text {
-              display: block;
-              font-style: italic;
-              font-weight: 300;
-              font-size: 14px;
-              line-height: 15px;
-              color: #595E65;
-              padding: 10px 0 0;
-            }
           }
 
           .calculation {
@@ -509,17 +497,8 @@
             margin: 0 0 15px;
           }
 
-          .indications-select {
-            @include custom-select;
+          .indications-select-wrapper {
             margin: 0 0 40px;
-            
-            .small-text {
-              font-style: italic;
-              font-weight: 300;
-              font-size: 14px;
-              line-height: 18px;
-              color: #595E65;
-            }
           }
 
           .selects-container {
@@ -531,10 +510,6 @@
 
               &:first-child {
                 margin-right: 30px;
-              }
-
-              .age-select {
-                @include custom-select;
               }
 
               .weight-input {
@@ -603,10 +578,9 @@
               width: calc(100% - 290px - 30px);
               margin: 0 0 40px 0;
 
-              .part-select,
-              .muscle-select,
-              .mas-select {
-                @include custom-select;
+              .part-select-wrapper,
+              .muscle-select-wrapper,
+              .mas-select-wrapper {  
                 margin: 0 0 40px;
               }
 
@@ -1005,7 +979,7 @@
               }
             }
   
-            .injector-select {
+            .injector-select-wrapper {
               margin: 0 0 25px;
             }
 
@@ -1013,7 +987,7 @@
               display: none;
             }
   
-            .dose-select {
+            .dose-select-wrapper {
               margin: 0 0 25px;
             }
   
@@ -1082,7 +1056,7 @@
               border: none;
             }
   
-            .indications-select {
+            .indications-select-wrapper {
               margin: 0 0 25px;
             }
   
@@ -1120,10 +1094,10 @@
                 width: 100%;
                 margin: 0 0 25px;
   
-                .part-select,
-                .muscle-select,
-                .mas-select {
-                  @include custom-select;
+                .part-select-wrapper,
+                .muscle-select-wrapper,
+                .mas-select-wrapper {
+                  
                   margin: 0 0 25px;
                 }
   
