@@ -1,6 +1,6 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function () {
   // общие функции
   var sliderCounter = function sliderCounter(slider, selector) {
     var count = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
@@ -257,6 +257,20 @@ document.addEventListener('DOMContentLoaded', function () {
     neurologyСalculationButton.onclick = function () {
       neurologyCalculationButtonContainer.classList.remove('active');
       neurologyCalculationResult.classList.add('active');
+    }; // селекты
+
+
+    var calculatorSelectTemplate = {
+      minimumResultsForSearch: Infinity,
+      width: '100%',
+      theme: 'relatox_gray'
     };
+    $('.injector-select').select2(calculatorSelectTemplate);
+    $('.dose-select').select2(calculatorSelectTemplate);
+    $('.indications-select').select2(calculatorSelectTemplate);
+    $('.age-select').select2(calculatorSelectTemplate);
+    $('.part-select').select2(calculatorSelectTemplate);
+    $('.muscle-select').select2(calculatorSelectTemplate);
+    $('.mas-select').select2(calculatorSelectTemplate);
   }
 });
