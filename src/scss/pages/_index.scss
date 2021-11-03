@@ -1,4 +1,4 @@
-.main {
+#main-page {
   .title {
     position: relative;
     font-family: 'Tahoma';
@@ -60,8 +60,6 @@
     }
 
     .main-slider {
-      width: 100%;
-
       .slide {
         background-position: center;
         background-repeat: no-repeat;
@@ -1152,9 +1150,7 @@
         display: none;
       }
   
-      .main-slider {
-        width: 100%;
-  
+      .main-slider {  
         .slide {
           background-position: 30%;
           background-repeat: no-repeat;

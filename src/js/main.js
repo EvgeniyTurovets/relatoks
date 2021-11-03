@@ -223,7 +223,7 @@ $(document).ready(function() {
   }
 
   // калькулятор
-  if(document.querySelector('div.calculator')) {
+  if(document.getElementById('calculator-page')) {
     const cosmetology = document.getElementById('calculate-cosmetology');
     const neurology = document.getElementById('calculate-neurology');
     const line = document.getElementById('calculator-title-line');
