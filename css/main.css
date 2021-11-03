@@ -1289,7 +1289,9 @@ a:visited {
   width: 120%;
 }
 #main-page .about .slider-wrapper .about-slider .slide {
-  padding: 40px 45px 45px 120px;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  padding-left: 120px;
 }
 #main-page .about .slider-wrapper .about-slider .slide .grid-container {
   background: #FFFFFF;
@@ -2036,7 +2038,9 @@ a:visited {
     width: 100%;
   }
   #main-page .about .slider-wrapper .about-slider .slide {
-    padding: 25px 0 30px;
+    padding-left: 0;
+    padding-top: 25px;
+    padding-bottom: 30px;
   }
   #main-page .about .slider-wrapper .about-slider .slide .grid-container {
     display: block;
