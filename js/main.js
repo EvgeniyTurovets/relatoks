@@ -237,6 +237,39 @@ $(document).ready(function () {
       line.className = 'title-line-blue';
       neurologyInfo.classList.add('active');
       cosmetologyInfo.classList.remove('active');
+    }; // выбор шприца
+
+
+    var injectorSelect = document.querySelector('.injector-select');
+    var ml1seg50 = document.querySelector('.ml1seg50');
+    var ml1seg40 = document.querySelector('.ml1seg40');
+    var ml05seg50 = document.querySelector('.ml05seg50');
+    var ml03seg30 = document.querySelector('.ml03seg30');
+
+    injectorSelect.onchange = function () {
+      var injectorId = injectorSelect.options[injectorSelect.selectedIndex].id;
+      ml1seg50.style.display = 'none';
+      ml1seg40.style.display = 'none';
+      ml05seg50.style.display = 'none';
+      ml03seg30.style.display = 'none';
+
+      switch (injectorId) {
+        case 'ml1seg50':
+          ml1seg50.style.display = 'block';
+          break;
+
+        case 'ml1seg40':
+          ml1seg40.style.display = 'block';
+          break;
+
+        case 'ml05seg50':
+          ml05seg50.style.display = 'block';
+          break;
+
+        case 'ml03seg30':
+          ml03seg30.style.display = 'block';
+          break;
+      }
     }; // клик по кнопке завершения расчета в косметологии
 
 
@@ -257,7 +290,7 @@ $(document).ready(function () {
     neurologyСalculationButton.onclick = function () {
       neurologyCalculationButtonContainer.classList.remove('active');
       neurologyCalculationResult.classList.add('active');
-    }; // селекты
+    }; // кастомные селекты
 
 
     var calculatorSelectTemplate = {

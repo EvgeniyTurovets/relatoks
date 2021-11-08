@@ -5194,7 +5194,7 @@ a:visited {
   top: calc(50% - 38px);
 }
 #calculator-page .main-content .small-container .content .cosmetology-info .injector .ml1seg50 {
-  display: block;
+  display: none;
 }
 #calculator-page .main-content .small-container .content .cosmetology-info .injector .ml1seg50 .left-part {
   left: 199px;
@@ -5413,6 +5413,27 @@ a:visited {
   background: #F3F3F3;
   border-radius: 5px;
   padding: 14px 20px;
+}
+#calculator-page .main-content .small-container .content .neurology-info .selects-container .item .weight-input input::-moz-placeholder {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #595E65;
+}
+#calculator-page .main-content .small-container .content .neurology-info .selects-container .item .weight-input input:-ms-input-placeholder {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #595E65;
+}
+#calculator-page .main-content .small-container .content .neurology-info .selects-container .item .weight-input input::placeholder {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #595E65;
 }
 #calculator-page .main-content .small-container .content .neurology-info .selects-container .item .weight-input .error {
   position: absolute;
@@ -5761,22 +5782,47 @@ a:visited {
   }
   #calculator-page .main-content .small-container .main-content-wrapper .control button {
     width: 100%;
-    height: 220px;
+    height: auto;
+    border-radius: 100px;
+    background-image: none !important;
+    filter: grayscale(0%);
+    padding: 14px 30px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: none;
   }
   #calculator-page .main-content .small-container .main-content-wrapper .control button:first-child {
     margin: 0 0 15px;
+    border: 2px solid #FBCBBB;
   }
   #calculator-page .main-content .small-container .main-content-wrapper .control button:first-child .text {
-    left: 20px;
-    bottom: 15px;
-    font-size: 14px;
-    line-height: 19px;
+    position: static;
+  }
+  #calculator-page .main-content .small-container .main-content-wrapper .control button:first-child.active {
+    background-color: #FBCBBB;
+  }
+  #calculator-page .main-content .small-container .main-content-wrapper .control button:first-child.active .text {
+    font-weight: 600;
+  }
+  #calculator-page .main-content .small-container .main-content-wrapper .control button:last-child {
+    border: 2px solid #0033A1;
   }
   #calculator-page .main-content .small-container .main-content-wrapper .control button:last-child .text {
-    left: 20px;
-    bottom: 15px;
-    font-size: 14px;
-    line-height: 19px;
+    position: static;
+  }
+  #calculator-page .main-content .small-container .main-content-wrapper .control button:last-child.active {
+    background-color: #0033A1;
+  }
+  #calculator-page .main-content .small-container .main-content-wrapper .control button:last-child.active .text {
+    color: white;
+    font-weight: 600;
+  }
+  #calculator-page .main-content .small-container .main-content-wrapper .control button .checkbox {
+    display: none;
+  }
+  #calculator-page .main-content .small-container .main-content-wrapper .control button:hover {
+    filter: grayscale(0%);
   }
   #calculator-page .main-content .small-container .content .cosmetology-info {
     margin: 30px 0 0;

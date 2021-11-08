@@ -99,16 +99,16 @@
       <section class="main-content">
         <div class="small-container">
           <div class="main-content-wrapper">
-            <div class="title"><span class="text-bold">Расчет</span> дозировки:</div>
+            <div class="title"><span class="text-bold">Выберите</span> направление:</div>
             <div class="control">
 
               <button id="calculate-cosmetology" type="button" style="background-image: url('./img/backgrounds/calculator-checkbox1.png');">
-                <div class="text">Для Косметологии</div>
+                <div class="text">Косметология</div>
                 <div class="checkbox"></div>
               </button type="button">
 
               <button id="calculate-neurology" type="button" style="background-image: url('./img/backgrounds/calculator-checkbox2.png');">
-                <div class="text">Для Неврологии</div>
+                <div class="text">Неврология</div>
                 <div class="checkbox"></div>
               </button type="button">
 
@@ -143,11 +143,12 @@
                   </div>
                 </div>
                 <div class="injector-select-wrapper">
-                  <select class="injector-select" name="injector">
-                    <option value="">1 мл на 50 делений</option>
-                    <option value="">1 мл на 40 делений</option>
-                    <option value="">0.5 мл на 50 делений</option>
-                    <option value="">0.3 мл на 30 делений</option>
+                  <select class="injector-select" name="injector" data-placeholder="Выберите шприц">
+                    <option></option>
+                    <option value="1" id="ml1seg50">1 мл на 50 делений</option>
+                    <option value="2" id="ml1seg40">1 мл на 40 делений</option>
+                    <option value="3" id="ml05seg50">0.5 мл на 50 делений</option>
+                    <option value="4" id="ml03seg30">0.3 мл на 30 делений</option>
                   </select>
                 </div>
 
@@ -174,19 +175,10 @@
                   Разведение:
                 </div>
                 <div class="dose-select-wrapper">
-                  <select class="dose-select" name="dose">
-                    <option value="">
-                      <p class="input-text">
-                        Классическое:
-                        <span class="input-sub-text">100 ЕД в 2 мл NaCl или 50 ЕД в 1 мл NaCl</span>
-                      </p>
-                    </option>
-                    <option value="">
-                      <p class="input-text">
-                        Высококонцентрированное:
-                        <span class="input-sub-text">100 ЕД в 1 мл NaCl или 50 ЕД в 0,5 мл NaCl</span>
-                      </p>
-                    </option>
+                  <select class="dose-select" name="dose" data-placeholder="Выберите разведение">
+                    <option></option>
+                    <option value="1">Классическое: 100 ЕД в 2 мл NaCl или 50 ЕД в 1 мл NaCl</option>
+                    <option value="2">Высококонцентрированное: 100 ЕД в 1 мл NaCl или 50 ЕД в 0,5 мл NaCl</option>
                   </select>
                 </div>
                 
@@ -239,8 +231,7 @@
                   Показание:
                 </div>
                 <div class="indications-select-wrapper">
-                  <select class="indications-select" name="indications" data-placeholder="Выберите показание из списка">
-                    <!-- для правильного отображения placeholder нужны пустой option и значения в option -->
+                  <select class="indications-select" name="indications" data-placeholder="Выберите показание">
                     <option></option>
                     <option value="1">ДЦП</option>
                     <option value="2">Спастичность верхней конечности после инсульта</option>
@@ -255,11 +246,12 @@
                       Полных лет:
                     </div>
                     <div class="age-select-wrapper">
-                      <select class="age-select" name="age">
-                        <option value="">5</option>
-                        <option value="">6</option>
-                        <option value="">7</option>
-                        <option value="">8</option>
+                      <select class="age-select" name="age" data-placeholder="Выберите возраст">
+                        <option></option>
+                        <option value="1">5</option>
+                        <option value="2">6</option>
+                        <option value="3">7</option>
+                        <option value="4">8</option>
                       </select>
                     </div>
                   </div>
@@ -269,7 +261,7 @@
                       Вес, кг:
                     </div>
                     <div class="weight-input">
-                      <input type="text">
+                      <input type="text" placeholder="Введите вес">
                       <div class="error">минимальный вес 8 кг</div>
                     </div>
                   </div>
@@ -290,11 +282,12 @@
                         Область (часть тела):
                       </div>
                       <div class="part-select-wrapper">
-                        <select class="part-select" name="part">
-                          <option value="">Мышца плеча</option>
-                          <option value="">Мышца предплечья</option>
-                          <option value="">Мышца кисти</option>
-                          <option value="">Мышца пояса верхней конечности</option>
+                        <select class="part-select" name="part" data-placeholder="Выберите часть тела">
+                          <option></option>
+                          <option value="1">Мышца плеча</option>
+                          <option value="1">Мышца предплечья</option>
+                          <option value="1">Мышца кисти</option>
+                          <option value="1">Мышца пояса верхней конечности</option>
                         </select>
                       </div>
                     </div>
@@ -304,10 +297,11 @@
                         Мышца:
                       </div>
                       <div class="muscle-select-wrapper">
-                        <select class="muscle-select" name="muscle">
-                          <option value="">m.Biceps brachii Двуглавая мышца плеча</option>
-                          <option value="">m.Brachialis Плечевая мышца</option>
-                          <option value="">m.Brachioradialis Плечелучевая мышца</option>
+                        <select class="muscle-select" name="muscle" data-placeholder="Выберите мышцу">
+                          <option></option>
+                          <option value="1">m.Biceps brachii Двуглавая мышца плеча</option>
+                          <option value="1">m.Brachialis Плечевая мышца</option>
+                          <option value="1">m.Brachioradialis Плечелучевая мышца</option>
                         </select>
                       </div>
                     </div>
@@ -318,7 +312,7 @@
                         <div class="title-icon">
                           <div class="mas-hint">
                             <div class="title">
-                              Модифицированнная шкала Эшворта (MAS):
+                              Модифицированная шкала Эшворта (MAS):
                             </div>
                             <div class="text">
                               <span class="text-bold">0 — </span>нет повышения мышечного тонуса;
@@ -342,9 +336,10 @@
                         </div>
                       </div>
                       <div class="mas-select-wrapper">
-                        <select class="mas-select" name="mas">
-                          <option value="">2</option>
-                          <option value="">3</option>
+                        <select class="mas-select" name="mas" data-placeholder="Выберите параметр спастичности">
+                          <option></option>
+                          <option value="1">2</option>
+                          <option value="1">3</option>
                         </select>
                       </div>
                     </div>
