@@ -667,7 +667,9 @@
 
       .about-slider {
         .slide {
-          padding: 40px 45px 45px 120px;
+          padding-top: 40px;
+          padding-bottom: 45px;
+          padding-left: 120px;
 
           .grid-container {
             background: #FFFFFF;
@@ -1150,7 +1152,7 @@
         display: none;
       }
   
-      .main-slider {  
+      .main-slider {
         .slide {
           background-position: 30%;
           background-repeat: no-repeat;
@@ -1509,7 +1511,9 @@
   
         .about-slider {
           .slide {
-            padding: 25px 0 30px;
+            padding-left: 0;
+            padding-top: 25px;
+            padding-bottom: 30px;
   
             .grid-container {
               display: block;

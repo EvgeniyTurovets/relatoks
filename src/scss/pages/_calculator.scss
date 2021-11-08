@@ -272,7 +272,7 @@
             }
 
             .ml1seg50 {
-              display: block;
+              display: none;
 
               .left-part {
                 left: 199px;
@@ -525,6 +525,14 @@
                   background: #F3F3F3;
                   border-radius: 5px;
                   padding: 14px 20px;
+
+                  &::placeholder {
+                    font-style: italic;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #595E65;
+                  }
                 }
                 
                 .error {
@@ -918,28 +926,58 @@
             flex-direction: column;
             height: auto;
   
-            button {      
+            button {
               width: 100%;
-              height: 220px;
-
+              height: auto;
+              border-radius: 100px;
+              background-image: none !important;
+              filter: grayscale(0%);
+              padding: 14px 30px;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 22px;
+              text-transform: none;
+        
               &:first-child {
                 margin: 0 0 15px;
+                border: 2px solid #FBCBBB;
                 
                 .text {
-                  left: 20px;
-                  bottom: 15px;
-                  font-size: 14px;
-                  line-height: 19px;
+                  position: static;
+                }
+
+                &.active {
+                  background-color:#FBCBBB;
+
+                  .text {
+                    font-weight: 600;
+                  }
                 }
               }
   
               &:last-child {
+                border: 2px solid #0033A1;
+
                 .text {
-                  left: 20px;
-                  bottom: 15px;
-                  font-size: 14px;
-                  line-height: 19px;
+                  position: static;
                 }
+
+                &.active {
+                  background-color: #0033A1;
+
+                  .text {
+                    color: white;
+                    font-weight: 600;
+                  }
+                }
+              }
+  
+              .checkbox {
+                display: none;
+              }
+  
+              &:hover {
+                filter: grayscale(0%);
               }
             }
           }
