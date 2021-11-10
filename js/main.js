@@ -296,7 +296,8 @@ $(document).ready(function () {
     var calculatorSelectTemplate = {
       minimumResultsForSearch: Infinity,
       width: '100%',
-      theme: 'relatox_gray'
+      theme: 'relatox_gray',
+      dropdownPosition: 'below'
     };
     $('.injector-select').select2(calculatorSelectTemplate);
     $('.dose-select').select2(calculatorSelectTemplate);
