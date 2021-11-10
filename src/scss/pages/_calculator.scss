@@ -236,6 +236,7 @@
 
           .injector-select-wrapper {
             margin: 0 0 10px;
+            position: relative;
           }
 
           .injector {
@@ -361,6 +362,7 @@
           }
 
           .dose-select-wrapper {
+            position: relative;
             margin: 0 0 40px;
           }
 
@@ -498,6 +500,7 @@
           }
 
           .indications-select-wrapper {
+            position: relative;
             margin: 0 0 40px;
           }
 
@@ -588,7 +591,8 @@
 
               .part-select-wrapper,
               .muscle-select-wrapper,
-              .mas-select-wrapper {  
+              .mas-select-wrapper {
+                position: relative;
                 margin: 0 0 40px;
               }
 

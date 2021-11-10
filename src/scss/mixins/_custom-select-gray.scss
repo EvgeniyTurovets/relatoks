@@ -41,6 +41,26 @@
         border-radius: 5px 5px 0 0;
       }
     }
+    
+    .select2-results__options {
+      overflow-y: auto;
+      max-height: 300px;
+
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #F5F5F5;
+      }
+    
+      &::-webkit-scrollbar {
+        width: 6px;
+        background: #E7E7E7;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        border-radius: 15px;
+        background: #B3B3B3;
+      }
+    }
 
     .select2-results__option {
       font-size: 16px;
