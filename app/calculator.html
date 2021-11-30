@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>New site</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <div class="nav-menu">
+      <a href="">
+        <img src="./img/logo.svg" class="logo">
+      </a>
+      <div class="menu">
+        <div class="item">
+          <button class="item-button">О препарате</button>
+          <img class="arrow" src="./img/elements/arrow-down-blue.svg">
+          <div class="dropdown-content">
+            <div class="control">
+              <button class="back-button" type="button">❮ назад</button>
+              <div class="name">О препарате</div>
+            </div>
+            <div class="link"><a href="">Инструкция и документы</a></div>
+            <div class="link"><a href="">Разработка и производство</a></div>
+          </div>
+        </div>
+        <div class="item">
+          <button class="item-button">Применение</button>
+          <img class="arrow" src="./img/elements/arrow-down-blue.svg">
+          <div class="dropdown-content">
+            <div class="control">
+              <button class="back-button" type="button">❮ назад</button>
+              <div class="name">Применение</div>
+            </div>
+            <div class="link"><a href="">В косметологии</a></div>
+            <div class="link"><a href="">В неврологии</a></div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="">Новости</a>
+        </div>
+        <div class="item">
+          <a href="">Вопрос-ответ</a>
+        </div>
+        <div class="item">
+          <a href="">Специалистам</a>
+        </div>
+        <div class="item">
+          <a href="">Где купить?</a>
+        </div>
+        <div class="item">
+          <a href="">Контакты</a>
+        </div>
+        <a href="" class="calculator">
+          Калькулятор доз
+        </a>
+        <div class="sub-info">
+          <div class="row">АО «НПО «Микроген», 2021</div>
+          <div class="row">РУ ЛП-001593 от 14.07.2021</div>
+          <div class="row">Лицензия № 00313-ЛС от 17.02.2020</div>
+        </div>
+      </div>
+      <label class="burger" for="burger-checkbox">
+        <input class="burger-checkbox" type="checkbox" id="burger-checkbox"/> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+  </div>
+</header>
+
+    <div id="calculator-page">
+
+      <section id="calculator-title-line" class="title-line-yellow">
+        <div class="container">
+          <h1 class="main-title"><span class="text-bold">Калькулятор</span> доз</h1>
+        </div>
+      </section>
+
+      <section class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb-wrapper">
+            <div class="item"><a href="">Главная</a></div>
+            <div class="item">Калькулятор доз</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-content">
+        <div class="small-container">
+          <div class="main-content-wrapper">
+            <div class="title"><span class="text-bold">Выберите</span> направление:</div>
+            <div class="control">
+
+              <button id="calculate-cosmetology" type="button" style="background-image: url('./img/backgrounds/calculator-checkbox1.png');">
+                <div class="text">Косметология</div>
+                <div class="checkbox"></div>
+              </button type="button">
+
+              <button id="calculate-neurology" type="button" style="background-image: url('./img/backgrounds/calculator-checkbox2.png');">
+                <div class="text">Неврология</div>
+                <div class="checkbox"></div>
+              </button type="button">
+
+            </div>
+            <div class="content">
+
+              <div id="cosmetology-info" class="cosmetology-info">
+                <div class="subtitle">
+                  Расчёт количества раствора, содержащего 1 ЕД препарата в инсулиновом шприце
+                </div>
+                
+                <div class="select-title">
+                  Шприц: 
+                  <div class="title-icon">
+                    <div class="injector-hint">
+                      <div class="text">
+                        Мы используем в калькуляторе следующие шприцы:
+                      </div>
+                      <ul class="list">
+                        <li>1 мл на 50 делений</li>
+                        <li>1 мл на 40 делений</li>
+                        <li>0.5 мл на 50 делений</li>
+                        <li>0.3 мл на 30 делений</li>
+                      </ul>
+                      <div class="text">
+                        Наиболее удобными для любых разведений считаются 0.5 мл на 50 делений, 0.3 мл на 30 делений.
+                      </div>
+                      <div class="text">
+                        Для классического разведения подходит также шприц 1 мл на 50 делений.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="injector-select-wrapper">
+                  <select class="injector-select" name="injector" data-placeholder="Выберите шприц">
+                    <option></option>
+                    <option value="1" id="ml1seg50">1 мл на 50 делений</option>
+                    <option value="2" id="ml1seg40">1 мл на 40 делений</option>
+                    <option value="3" id="ml05seg50">0.5 мл на 50 делений</option>
+                    <option value="4" id="ml03seg30">0.3 мл на 30 делений</option>
+                  </select>
+                </div>
+
+                <div class="injector">
+                  <div class="ml1seg50">
+                    <img src="./img/partials/injector-1ml50seg-left.png" alt="" class="left-part">
+                    <img src="./img/partials/injector-1ml50seg-right.png" alt="" class="right-part">
+                  </div>
+                  <div class="ml1seg40">
+                    <img src="./img/partials/injector-1ml40seg-left.png" alt="" class="left-part">
+                    <img src="./img/partials/injector-1ml40seg-right.png" alt="" class="right-part">
+                  </div>
+                  <div class="ml05seg50">
+                    <img src="./img/partials/injector-0.5ml50seg-left.png" alt="" class="left-part">
+                    <img src="./img/partials/injector-0.5ml50seg-right.png" alt="" class="right-part">
+                  </div>
+                  <div class="ml03seg30">
+                    <img src="./img/partials/injector-0.3ml30seg-left.png" alt="" class="left-part">
+                    <img src="./img/partials/injector-0.3ml30seg-right.png" alt="" class="right-part">
+                  </div>
+                </div>
+
+                <div class="select-title">
+                  Разведение:
+                </div>
+                <div class="dose-select-wrapper">
+                  <select class="dose-select" name="dose" data-placeholder="Выберите разведение">
+                    <option></option>
+                    <option value="1">Классическое: 100 ЕД в 2 мл NaCl или 50 ЕД в 1 мл NaCl</option>
+                    <option value="2">Высококонцентрированное: 100 ЕД в 1 мл NaCl или 50 ЕД в 0,5 мл NaCl</option>
+                  </select>
+                </div>
+                
+                <div id="cosmetology-calculation-button-container" class="calculation active">
+                  <button id="cosmetology-calculation-button" class="calculation-button">
+                    Завершить расчет
+                  </button>
+                </div>
+
+                <div id="cosmetology-calculation-result" class="result">
+                  <div class="title"><span class="text-bold">Ваш</span> результат:</div>
+                  <ul class="list">
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          1 ЕД
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        1 Деление
+                      </div>
+                    </li>
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          Итого
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        1 Деление
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="buttons-container">
+                    <a href="" class="button"><img src="./img/icons/mail-empty.svg">Отправить по e-mail</a>
+                    <a href="" class="button"><img src="./img/icons/phone-empty.svg">Отправить по SMS</a>
+                    <a href="" class="button">Сохранить расчет</a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="neurology-info" class="neurology-info">
+                <div class="subtitle">
+                  Мы предлагаем удобный калькулятор для расчёта доз препарата 
+                  Релатокс на одну инъекционную сессию для одного пациента
+                </div>
+                
+                <div class="select-title">
+                  Показание:
+                </div>
+                <div class="indications-select-wrapper">
+                  <select class="indications-select" name="indications" data-placeholder="Выберите показание">
+                    <option></option>
+                    <option value="1">ДЦП</option>
+                    <option value="2">Спастичность верхней конечности после инсульта</option>
+                    <option value="3">Блефароспазм</option>
+                    <option value="4">Аксиллярный гипергидроз</option>
+                  </select>
+                </div>
+
+                <div class="selects-container">
+                  <div class="item">
+                    <div class="select-title">
+                      Полных лет:
+                    </div>
+                    <div class="age-select-wrapper">
+                      <select class="age-select" name="age" data-placeholder="Выберите возраст">
+                        <option></option>
+                        <option value="1">5</option>
+                        <option value="2">6</option>
+                        <option value="3">7</option>
+                        <option value="4">8</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="select-title">
+                      Вес, кг:
+                    </div>
+                    <div class="weight-input">
+                      <input type="text" placeholder="Введите вес">
+                      <div class="error">минимальный вес 8 кг</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="title"><span class="text-bold">Добавить</span> мышцу:</div>
+                <div class="body-container">
+                  <div class="body-preview">
+                    <img src="./img/partials/body.jpg" usemap="#body-map" class="image"/>
+                    <div class="sub-text">
+                      Можно добавить или убрать мышцу в перечень спатичности, кликнув нужную область
+                    </div>
+                  </div>
+                  <div class="body-selects">
+
+                    <div class="item">
+                      <div class="select-title">
+                        Область (часть тела):
+                      </div>
+                      <div class="part-select-wrapper">
+                        <select class="part-select" name="part" data-placeholder="Выберите часть тела">
+                          <option></option>
+                          <option value="1">Мышца плеча</option>
+                          <option value="1">Мышца предплечья</option>
+                          <option value="1">Мышца кисти</option>
+                          <option value="1">Мышца пояса верхней конечности</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="select-title">
+                        Мышца:
+                      </div>
+                      <div class="muscle-select-wrapper">
+                        <select class="muscle-select" name="muscle" data-placeholder="Выберите мышцу">
+                          <option></option>
+                          <option value="1">m.Biceps brachii Двуглавая мышца плеча</option>
+                          <option value="1">m.Brachialis Плечевая мышца</option>
+                          <option value="1">m.Brachioradialis Плечелучевая мышца</option>        
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="select-title">
+                        MAS:
+                        <div class="title-icon">
+                          <div class="mas-hint">
+                            <div class="title">
+                              Модифицированная шкала Эшворта (MAS):
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">0 — </span>нет повышения мышечного тонуса;
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">1 — </span>Лёгкое повышение мышечного тонуса — незначительное сопротивление 
+                              в начале совершаемого пассивного движения с последующим расслаблением;
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">2 — </span>Умеренное повышение мышечного тонуса — сопротивление на протяжении большей части 
+                              объёма пассивного движения, однако совершение этого движения не затруднено;
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">3 — </span>Значительное повышение мышечного тонуса — совершение 
+                              пассивного движения затруднено, объём движения в суставе ограничен;
+                            </div>
+                            <div class="text">
+                              <span class="text-bold">4 — </span>Поражённый сегмент конечности фиксирован в положении сгибания или разгибания.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mas-select-wrapper">
+                        <select class="mas-select" name="mas" data-placeholder="Выберите параметр спастичности">
+                          <option></option>
+                          <option value="1">2</option>
+                          <option value="1">3</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="muscle-adding-wrapper">
+                      <button class="muscle-adding">
+                        Добавить новую мышцу
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="table">
+                    <div class="title-row">
+                      <div class="name">Перечень мышц</div>
+                      <div class="mas">Уровень MAS</div>
+                    </div>
+                    <div class="row">
+                      <a class="name" href="">т.Biceps brachii Двуглавая мышца плеча</a>
+                      <div class="mas">2</div>
+                      <button class="remove"></button>
+                    </div>
+                    <div class="row">
+                      <a class="name" href="">т.Flexor digitorum profundus Глубокий сгибатель пальцев</a>
+                      <div class="mas">4</div>
+                      <button class="remove"></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="neurology-calculation-button-container" class="calculation active">
+                  <button id="neurology-calculation-button" class="calculation-button">
+                    Завершить расчет
+                  </button>
+                </div>
+
+                <div id="neurology-calculation-result" class="result">
+                  <div class="title"><span class="text-bold">Ваш</span> результат:</div>
+                  <ul class="list">
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          Двуглавая мышца плеча
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        36 ЕД
+                      </div>
+                    </li>
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          Плечелучевая мышца
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        126 ЕД
+                      </div>
+                    </li>
+                    <li class="row">
+                      <div class="first-column">
+                        <div class="text">
+                          Итого
+                        </div>
+                      </div>
+                      <div class="second-column">
+                        126 ЕД
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="sub-text">Максимальная доза превышена. Рекомендуем сократить количество мышц или пересмотреть степень MAS.</div>
+
+                  <div class="buttons-container">
+                    <a href="" class="button"><div class="mail-icon"></div>Отправить по e-mail</a>
+                    <a href="" class="button"><div class="phone-icon"></div>Отправить по SMS</a>
+                    <a href="" class="button">Сохранить расчет</a>
+                  </div>
+                </div>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <footer class="footer">
+  <div class="container">
+    <div class="main-menu">
+      <div class="item-big">
+        <a href="">
+          <img src="./img/logo.svg" class="logo">
+        </a>
+        <div class="text-styled">Сообщить о нежелательной реакции</div>
+        <div class="address">127473, г. Москва, 2-й Волконский переулок, д.10</div>
+      </div>
+      <div class="item-big">
+        <div class="text-bold">О препарате</div>
+        <div class="link"><a href="">Инструкция и документы</a></div>
+        <div class="link"><a href="">Разработка и производство</a></div>
+      </div>
+      <div class="item">
+        <div class="text-bold">Применение</div>
+        <div class="link"><a href="">В косметологии</a></div>
+        <div class="link"><a href="">В неврологии</a></div>
+      </div>
+      <div class="item">
+        <div class="link-bold"><a href="">Новости</a></div>
+        <div class="link-bold"><a href="">Вопрос-ответ</a></div>
+        <div class="link-bold"><a href="">Полезное</a></div>
+        <a href="" class="icon-instagram"><img src="./img/icons/icon-instagram.svg"></a href="">
+      </div>
+      <div class="item">
+        <div class="link-bold"><a href="">Где купить?</a></div>
+        <div class="link-bold"><a href="">Контакты</a></div>
+        <div class="calculator-wrapper"><a href="" class="calculator">Калькулятор доз</a></div>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="policy">
+      <div class="text-container">
+        <div class="text">АО «НПО «Микроген», 2021</div>
+        <div class="text">РУ ЛП-001593 от 14.07.2021</div>
+        <div class="text">Лицензия № 00313-ЛС от 17.02.2020</div>
+      </div>
+      <div class="link-container">
+        <div class="link"><a href="">Политика по обработке Персональных данных</a></div>
+        <div class="link"><a href="">Условия использования файлов cookie</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="line"></div>
+</footer>
+
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
